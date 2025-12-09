@@ -12,25 +12,18 @@ Includes functions for:
 
     """
 
-class EquationTools(object):
-    def __init__(self, diff, int_qty=0, ops=0):
+class MistSums(object):
+    def __init__(self):
         """Initiate object."""
-        self.int_qty = int_qty  # Controls number of integers in equations
-        self.ops = ops
+        self.int_qty = 0  # initial int qty is 0
+        self.ops = 0  # initial op qty is 0
+        self.equation=0
+        self.ans=0
     
-    def int_tool(self, int_qty, diff):
+    def int_tool(self, diff):
         """Create a dictionary and fills it with integer values."""
         self.int_dic = []
-        if diff == "med2":
-            integers = [9, 9, 99, 99]
-            random.shuffle(integers)
-            self.ops = ('*', '-', '*')
-    
-        elif diff == "med1":
-            integers = [9, 9, 9, 9]
-            self.ops = ('+', '-', '*')
-        
-        elif diff == "easy1":
+        if diff == "easy1":
             integers = [9, 9]
             self.ops = ('+', '-')
         
@@ -38,17 +31,27 @@ class EquationTools(object):
             integers = [9, 9, 9]
             self.ops = ('+', '-')
         
+        elif diff == "med1":
+            integers = [9, 9, 9, 9]
+            self.ops = ('+', '-', '*')
+        
+        elif diff == "med2":
+            integers = [9, 9, 99, 99]
+            random.shuffle(integers)
+            self.ops = ('*', '-', '*')
+        
         elif diff == "hard":
             integers = [99, 99, 99, 99]
             self.ops = ('+', '-', '/', '*')
         
         self.int_qty = len(integers)
-    
+        
         for i, val in enumerate(integers):
             num = range(1, integers[i])
             temp = float(random.choice(num))
             self.int_dic.append(temp)
-    def opt_gen_tool(self, ops):
+        
+    def opt_gen_tool(self):
         """Generate the necessary operators for the equation."""
         self.op_dic = []
         temp = 0
@@ -56,10 +59,11 @@ class EquationTools(object):
             temp = str(random.choice(self.ops))
             self.op_dic.append(temp)
     
-    def eq_generator(self, dict_list, opt_list):
+    def eq_generator(self, diff):
         """Create equation."""
         while True:
-            self.int_tool(self.int_qty, self.diff)
+            self.int_tool(diff)
+            self.opt_gen_tool()
             self.equation = [
                 x for x in itertools.chain.from_iterable(
                     itertools.zip_longest(
@@ -68,49 +72,24 @@ class EquationTools(object):
                         fillvalue=''))]
             self.equation = ' '.join(str(e) for e in self.equation)
             if ("/0" not in self.equation):
+                self.ans = eval(self.equation)
                 break
-            self.ans = eval(self.equation)
-
-
-class MistSums(EquationTools):
-    """Don't know what this does."""
     
-    def __init__(
-            self, ans=0, equation=0,
-            diff="med",
-            int_qty=0,
-            op_qty=0,
-            ops=0,
-            dict_list=[],
-            opt_list=[]):
-        
-        EquationTools.__init__(
-            self,
-            diff,
-            int_qty,
-            op_qty)
-        
-        self.equation = equation
-        self.ans = ans
-        self.diff = diff
-        self.int_qty = int_qty
-        self.ops = ops
-    
-    def EasyOps1(self):
+    def make_equation(self, diff):
         """Make an easy op."""
+        if "last_eq" not in locals():
+            last_eq = "world"
         
         while True:
-            self.int_tool(self.int_qty, self.diff)
-            self.opt_gen_tool(self.ops)
-            self.eq_generator(self.int_dic, self.op_dic)
-            if (
-                    (
-                        float(self.ans).is_integer()) and
-                    (self.ans >= 0) and
-                    (self.ans <= 9)):
+            self.eq_generator(diff)
+            if ((float(self.ans).is_integer()) and
+                (int(self.ans) >= 0) and
+                (int(self.ans) <= 9)) and last_eq != self.equation:
                 self.equation = self.equation.replace('.0', '')
                 self.ans = str(self.ans).replace('.0', '')
+                last_ans = self.ans
                 break
+
 
 
 usrAvg = 0
