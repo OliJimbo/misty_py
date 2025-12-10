@@ -7,7 +7,9 @@ An implementation of the Montreal Imaging Stress Task. An arithmetic generator d
 - they are given visual "performance" feedback that compares their scores with a fictitious norm group (controlled by the 'usrAvg' variable),
 - researchers should give verbal reminders that participants need to perform at least at the average compared with the norm group.
 
-If using the misty_modular.psyexp file, ensure that misty.py is in the experiment folder as this is imported by the code component.
+There are two versions:  misty_aio.psyexp is messier and has all functions within a code component; misty_modular imports most of the code from misty.py
+
+If you are using the misty_modular.psyexp file, ensure that misty.py is in the experiment folder as this is imported by the code component.
 
 To change the rules of the task, you can edit the variables and statements in the 'End Routine' section of the code component.
 
@@ -21,7 +23,7 @@ The variables are:
 - difficulty (string array, controls the complexity of the equations),
 - rt_list (float array, stores response times to take average. Starting value set at several 10's).
 
-## Performance Feedback  (code_component.py lines 43-63)
+## Performance Feedback  (code_component.py lines 48-69)
 The rules are currently set to the following:
 - Each correct answer:
 -- increases the streak_count variable by 1,
@@ -30,7 +32,7 @@ The rules are currently set to the following:
 -- Sets streak_count to 0 and subtracts 1,
 -- increases pointer_pos by a larger amount (shifts pointer to left)
 
-## Difficulty of Equations (code_component.py lines 69-79)
+## Difficulty of Equations (code_component.py lines 71-80)
 - If there are three consecutive correct answers, participants time is reduced by 10%,
 - If there are three incorrect answers in a row, participants time is increased by 10%,
 - If the total number of correct answers:
@@ -40,7 +42,7 @@ The rules are currently set to the following:
 -- between 15 and 20, then equations are set to med2, (three integers between 0-99; addition, subtraction, multiplication),
 -- over 20, then equations are set to med1, (three integers between 0-99; addition, subtraction, multiplication, division).
 
-## Trial Time  (code_component.py lines 84-94)
+## Trial Time  (code_component.py lines 85-104)
 - Participants start with 10 seconds per equation,
 - response time is saved for each trial,
 - after the first 5 trials,

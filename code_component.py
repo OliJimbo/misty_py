@@ -40,35 +40,41 @@ if timer.getTime() <= 0:
 
 # End Routine
 # Set variables and adjust pointer
-if slider.getRating() == ans:
-    msg = "Correct!"  # For correct trials add one to
-    streak_count += 1   # correct counter
-    total_cor += 1     # and total correct.
-    pointer_pos -= 0.005  # increase userAverage pointer by 0.05
+this_key = "emp"
+if len(key_resp.keys) > 0:
+    this_key = int(key_resp.keys[0])
+this_resp =[slider.getRating(), this_key]
+
+if  ans in this_resp:
+        msg = "Correct!"  # For correct trials add one to
+        streak_count += 1   # correct counter
+        total_cor += 1     # and total correct.
+        pointer_pos -= 0.005  # increase userAverage pointer by 0.05
 
 elif (timeout is True):
     msg = "Time-Out!"
     if streak_count < 0:
         streak_count = 0 # combo-breakakaka
-    streak_count -= 1
-    pointer_pos += 0.1
+        streak_count -= 1
+        pointer_pos += 0.1
 
-elif (slider.getRating() != ans):  # For incorrect answers
+elif ans not in this_resp: # For incorrect answers
     msg = "Incorrect!"
     if streak_count > 0:
-        streak_count = 0
-    streak_count -= 1  # set streak to 0 and minus 1 (count incorrect)
-    pointer_pos += 0.1  # add 0.1 to userAverage pointer (1-userAv)
+        streak_count = 0    
+        streak_count -= 1  # set streak to 0 and minus 1 (count incorrect)
+        pointer_pos += 0.1  # add 0.1 to userAverage pointer (1-userAv)
 
 if pointer_pos >= 1.8:
     pointer_pos = 1.8
 
-
-if slider.getRT() is None:
+if timeout:
     RT = time
 else:
-    RT = slider.getRT()
-
+    if slider.getRT() is None:
+        RT = key_resp.rt
+    else:
+        RT = slider.getRT()
 if total_cor < 5:  # Sets difficulty of sums at four steps
     difficulty = "easy1"  # just +- sums, 2 integers 0-9
 elif total_cor == 5:
@@ -85,6 +91,7 @@ elif total_cor == 20:
 
 trial_counter += 1
 rt_list.append(RT)
+
 if trial_counter > 5:
     time = np.mean(rt_list) * time_coef
     if streak_count == 3:  # every 3 correct answers reduces the mean time by 10%
