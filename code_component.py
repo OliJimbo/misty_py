@@ -1,21 +1,30 @@
 #!/usr/bin/env python3
 
-### Make sure that misty.py is in the experiment folder
-### Begin Experiment
+"""
+Code component for misty psychopy implementation
+Make sure that misty.py is in the experiment folder
+
+"""
+
+# Begin Experiment
 import misty
 
-usrAvg = 0
-msg = ""
-eq = ""
-corCount = 0
-inCorCount = 0
-meanRT = [10,10,10,10,10,10] 
-time = 10
-totalCor = 0
-difficulty = "easy1"
-timeCoef = 1
+# Set variables
+pointer_pos = 0  # x position of pointer
+msg = ""  # feedback message
+eq = ""  # equation string
+streak_count = 0  # current streak
+total_cor = 0  # total number of correct answers
+rt_list = []  # list of reaction times
+time = 10  # starting value for trial time
+difficulty = "easy1"  # diffculty of equation
+time_coef = 1  # amount to reduce trial time by
+trial_counter = 0  # current trial
 
-### Begin Routine
+# Begin Routine
+# Set countdown timer
+# Create equation
+
 msg = ""
 timer = core.CountdownTimer(time)
 x = misty.MistSums()
@@ -24,61 +33,64 @@ eq = "%s = ?" %(x.equation)
 ans = int(x.ans)
 timeout = False
 
-### Each Frame
+# Each Frame
 if timer.getTime() <= 0:
     continueRoutine = False
     timeout = True
-    
-### End Routine
-if slider.getRating() == ans: 
-        msg = "Correct"                #For correct trials add one to 
-        corCount = corCount + 1       #correct counter
-        totalCor=totalCor + 1           #and total correct.
-        usrAvg = usrAvg - 0.005         #increase userAverage pointer by 0.05
-elif (timeout == True):
-    msg = "Time-Out"
-    if corCount > 0:
-        corCount = 0 #combo-breakakaka
-    corCount -= 1
-    usrAvg= usrAvg+0.1
 
-elif (slider.getRating() != ans): #For incorrect answers
-    msg = type(this_ans)
-    if corCount > 0:
-        corCount = 0
-    corCount -= 1 # minus one from correct counter
-    usrAvg = usrAvg + 0.1 #add 0.1 to userAverage pointer (1-userAv)
+# End Routine
+# Set variables and adjust pointer
+if slider.getRating() == ans:
+    msg = "Correct!"  # For correct trials add one to
+    streak_count += 1   # correct counter
+    total_cor += 1     # and total correct.
+    pointer_pos -= 0.005  # increase userAverage pointer by 0.05
+
+elif (timeout is True):
+    msg = "Time-Out!"
+    if streak_count < 0:
+        streak_count = 0 # combo-breakakaka
+    streak_count -= 1
+    pointer_pos += 0.1
+
+elif (slider.getRating() != ans):  # For incorrect answers
+    msg = "Incorrect!"
+    if streak_count > 0:
+        streak_count = 0
+    streak_count -= 1  # set streak to 0 and minus 1 (count incorrect)
+    pointer_pos += 0.1  # add 0.1 to userAverage pointer (1-userAv)
+
+if pointer_pos >= 1.8:
+    pointer_pos = 1.8
 
 
-if slider.getRT() == None:
+if slider.getRT() is None:
     RT = time
 else:
     RT = slider.getRT()
 
-if corCount == 3: #every 3 correct answers reduces the mean time by 10%
-    timeCoef = (timeCoef * 0.9)
-    corCount = 0 #resets the counter
+if total_cor < 5:  # Sets difficulty of sums at four steps
+    difficulty = "easy1"  # just +- sums, 2 integers 0-9
+elif total_cor == 5:
+    difficulty = "easy2"  # just +- sums, 3 integers 0-9
+elif total_cor == 10:
+    difficulty = "med1"  # +-* sums, 3 integers 0-9
+elif total_cor == 15:
+    difficulty = "med2"  # +-* sums, 3 integers 0-99
+elif total_cor == 20:
+    difficulty = "hard"  # +-/* sums, 3 integers 0-99
 
-if corCount == -3: #every three incorrect answers
-    timeCoef = (timeCoef / 0.9) #time is increased by 10%
-    corCount = 0 #resets counter
+# print(corCount)
+# print(time)
 
-if totalCor < 5: #Sets difficulty of sums at four steps
-    difficulty = "easy1" #just +- sums, 2 integers 0-9
-elif totalCor == 5:
-    difficulty = "easy2" #just +- sums, 3 integers 0-9
-elif totalCor == 10:
-    difficulty = "med1" # +-* sums, 3 integers 0-9
-elif totalCor == 15:
-    difficulty = "med2" # +-* sums, 3 integers 0-99
-elif totalCor == 20: 
-    difficulty = "hard" # +-/* sums, 3 integers 0-99
+trial_counter += 1
+rt_list.append(RT)
+if trial_counter > 5:
+    time = np.mean(rt_list) * time_coef
+    if streak_count == 3:  # every 3 correct answers reduces the mean time by 10%
+        time_coef = (time_coef * 0.9)
+        streak_count = 0  # resets the counter
 
-#print(corCount)
-#print(time)
-
-meanRT.append(RT)
-time = np.mean(meanRT) * timeCoef
-
-if usrAvg >= 1.8:
-    usrAvg = 1.8
+    if streak_count == -3:  # every three incorrect answers
+        time_coef = (time_coef / 0.9) # time is increased by 10%
+        cor_count = 0  # resets counter
