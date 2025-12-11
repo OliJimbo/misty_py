@@ -1,5 +1,30 @@
-# misty
-An implementation of the Montreal Imaging Stress Task. An arithmetic generator designed after the MIST - Dedovic, K., Renwick, R., Mahani, N. K., Engert, V., Lupien, S. J., &amp; Pruessner, J. C. (2005). The Montreal Imaging Stress Task: using functional imaging to investigate the effects of perceiving and processing psychosocial stress in the human brain. Journal of Psychiatry and Neuroscience, 30(5), 319. For use in PsychoPy builder.
+<p align="center">
+    <img src="./img/header.jpg" alt="Misty"  loading="lazy" height="200", width="800"/>
+    </p>
+
+# <img src="./img/logo.png", alt="Misty", width="100"/>
+<img src="./img/logo.png", alt="Misty", width="50"/> is an implementation of the Montreal Imaging Stress Task described by Dedovic et al (2005)[^1].
+Perhaps the most commonly used stress inducement protocol is the Trier Social Stress Test (TSST) [^2].
+The TSST requires subjects to prepare and perform a speech and answer a series of mental arithmetic questions in front of a small audience, a procedure that is not feasible in e.g. fMRI studies in which tasks are necessarily performed in a large, noisy tube.
+
+The MIST was developed to allow stress to be induced whilst subjects are scanned, and focuses on the arithmetic element of the TSST.
+
+In brief, participants are required to answer mental arithmetic questions under conditions that become progressively adverse over several dimensions.
+First, the time limit per question is adaptive.
+Participants average solution times are initially estimated and set as the time limit, and the more questions they get correct, the faster the timer decreases.
+Secondly, the more questions subjects get right, the harder the questions become.
+At their easiest, questions involve a single basic elementary operation (either + or )- on integers between 1-9, with the hardest questions having any two elementary operations (+, -, ×, or ÷) on integers between 1-99.
+Third, and most importantly, the participant constantly evaluates, and is evaluated on, performance. 
+They are presented with a progress bar that represents their performance relative to a fictitious norm group.
+Their position decreases faster than it increases, and they should be reminded periodically by the researcher that they must maintain an average (or above) performance.
+Crucially, the main stressor is not the questions themselves (although these may be for people who have maths anxiety...), but the "public" performance of the questions.
+
+<img src="./img/logo.png", alt="Misty", width="50"/> implements this procedure in PsychoPy so that it may be used in imaging studies or in the lab.
+It is distributed as a PsychoPy .psyexp file so that it can be used immediately, and adapted easily.
+
+It also comes as a module so that it can be used with the PsychoPy API, or in Python more broadly.
+
+Issues, pull requests, and comments are all very welcome.
 
 ## misty_py
 The routines for producing equations are defined by the class `MistSums`.
@@ -80,3 +105,8 @@ This work is licensed under a
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
 [cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
+
+[^1]: Dedovic, K., Renwick, R., Mahani, N. K., Engert, V., Lupien, S. J., &amp; Pruessner, J. C. (2005). The Montreal Imaging Stress Task: using functional imaging to investigate the effects of perceiving and processing psychosocial stress in the human brain. Journal of Psychiatry and Neuroscience, 30(5), 319.
+
+
+[^2]: Kirschbaum, C., Pirke, K. M., & Hellhammer, D. H. (1993). The ‘Trier Social Stress Test’–a tool for investigating psychobiological stress responses in a laboratory setting. Neuropsychobiology, 28(1-2), 76-81.
