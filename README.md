@@ -1,11 +1,15 @@
-<p align="center">
-    <img src="./img/header.jpg" alt="Misty"  loading="lazy" height="200", width="800"/>
-    </p>
+<picture>
+<img alt="Picture of Misty from Pokemon scaring Brock, Ash, and Pikachu" src="./img/header.jpg">
+</picture>
 
-# `<img src="./img/logo.png", alt="Misty", width="100"/>`
-<img src="./img/logo.png", alt="Misty", width="50"/> is an implementation of the Montreal Imaging Stress Task described by Dedovic et al (2005)[^1].
-Perhaps the most commonly used stress inducement protocol is the Trier Social Stress Test (TSST) [^2].
-The TSST requires subjects to prepare and perform a speech and answer a series of mental arithmetic questions in front of a small audience, a procedure that is not feasible in e.g. fMRI studies in which tasks are necessarily performed in a large, noisy tube.
+<h1> <img src="./img/logo.png", alt="Misty", width="100"/> </h1>
+
+<p> <img src="./img/logo.png", alt="Misty", width="10"/> is an implementation of the Montreal Imaging Stress Task (MIST) described by Dedovic et al (2005)<sup><a href="#ref-1" id="cite-1" aria-describedby="reference-label">1</a> </sup>.
+</p>
+
+MIST is based on one of the most commonly used stress inducement protocols, the Trier Social Stress Test (TSST) <sup><a href="#ref-2" id="cite-2" aria-describedby="reference-label">2</a> </sup>.
+
+The TSST requires subjects to prepare and perform a speech and answer a series of mental arithmetic questions in front of a small audience, a procedure that is not feasible in e.g. fMRI studies in which tasks are necessarily performed in a large, noisy tube. 
 
 The MIST was developed to allow stress to be induced whilst subjects are scanned, and focuses on the arithmetic element of the TSST.
 
@@ -93,7 +97,13 @@ The rules are currently set to the following:
 -- for every three correct answers, the amount of time for each trial is reduced by 10%,
 -- for every three incorrect answers, the amount of time for each trial is increased by 10%.
 
-
+<h1>References</h1>
+    <ol>
+        <li id="ref-1">
+            [1] Dedovic, K., Renwick, R., Mahani, N. K., Engert, V., Lupien, S. J., &amp; Pruessner, J. C. (2005). The Montreal Imaging Stress Task: using functional imaging to investigate the effects of perceiving and processing psychosocial stress in the human brain. Journal of Psychiatry and Neuroscience, 30(5), 319.
+    <a href="#cite-1" aria-label="Back to reference 1">↩</a>
+        </li>
+    </ol>
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
@@ -105,8 +115,3 @@ This work is licensed under a
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
 [cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
-
-[^1]: Dedovic, K., Renwick, R., Mahani, N. K., Engert, V., Lupien, S. J., &amp; Pruessner, J. C. (2005). The Montreal Imaging Stress Task: using functional imaging to investigate the effects of perceiving and processing psychosocial stress in the human brain. Journal of Psychiatry and Neuroscience, 30(5), 319.
-
-
-[^2]: Kirschbaum, C., Pirke, K. M., & Hellhammer, D. H. (1993). The ‘Trier Social Stress Test’–a tool for investigating psychobiological stress responses in a laboratory setting. Neuropsychobiology, 28(1-2), 76-81.
