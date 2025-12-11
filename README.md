@@ -97,14 +97,18 @@ The rules are currently set to the following:
 -- trial time is set to the participants mean response time, 
 -- for every three correct answers, the amount of time for each trial is reduced by 10%,
 -- for every three incorrect answers, the amount of time for each trial is increased by 10%.
-
-<h1>References</h1>
+<section>
+    <h1>References</h1>
     <ol>
         <li id="ref-1">
             [1] Dedovic, K., Renwick, R., Mahani, N. K., Engert, V., Lupien, S. J., &amp; Pruessner, J. C. (2005). The Montreal Imaging Stress Task: using functional imaging to investigate the effects of perceiving and processing psychosocial stress in the human brain. Journal of Psychiatry and Neuroscience, 30(5), 319.
-    <a href="#cite-1" aria-label="Back to reference 1">↩</a>
+            <a href="#cite-1" aria-label="Back to reference 1">↩</a>
+        </li>
+        <li id="ref-2">
+            Kirschbaum, C., Pirke, K. M., &amp; Hellhammer, D. H. (1993). The ‘Trier Social Stress Test’–a tool for investigating psychobiological stress responses in a laboratory setting. Neuropsychobiology, 28(1-2), 76-81. <a href="#cite-1" aria-label="Back to reference 2">↩</a>
         </li>
     </ol>
+</section>
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
