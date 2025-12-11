@@ -21,7 +21,8 @@ In brief, participants are required to answer mental arithmetic questions under 
   
 Crucially, the main stressor is not the questions themselves (although these may be for people who have maths anxiety...), but the "public" performance of the questions.
 
-<p> <img src="./img/logo.png" alt="Misty" width="50"/> implements this procedure in PsychoPy so that it may be used in imaging studies or in the lab (or even in the classroom).
+<p> <img src="./img/logo.png" alt="Misty" width="50"/> implements this procedure in PsychoPy so that it may be used in imaging studies or in the lab (or even in the classroom).</p>
+
 It is distributed as a PsychoPy `.psyexp` file so that it can be used immediately, and adapted easily.
 
 It also comes as a module so that it can be used with the PsychoPy API, or in Python more broadly.
@@ -70,36 +71,36 @@ To change the rules of the task, you can edit the variables and statements in th
 [code_component.py lines 48-69](https://github.com/OliJimbo/misty_py/blob/e6e290768db68a52c6d571e81b91b9856e517ead/code_component.py#L48C1-L69C1)
 The rules are currently set to the following:
 - Each correct answer:
--- increases the streak_count variable by 1,
--- decreases pointer_pos by a small amount (shifts pointer to the right) 
+  - increases the streak_count variable by 1,
+  - decreases pointer_pos by a small amount (shifts pointer to the right) 
 - Each incorrect answer:
--- Sets streak_count to 0 and subtracts 1,
--- increases pointer_pos by a larger amount (shifts pointer to left)
+  - Sets streak_count to 0 and subtracts 1,
+  - increases pointer_pos by a larger amount (shifts pointer to left)
 
 ## Difficulty of Equations
 [code_component.py lines 71-80](https://github.com/OliJimbo/misty_py/blob/e6e290768db68a52c6d571e81b91b9856e517ead/code_component.py#L71C1-L80C1)
 - If there are three consecutive correct answers, participants time is reduced by 10%,
 - If there are three incorrect answers in a row, participants time is increased by 10%,
-- If the total number of correct answers:
--- less than 5, then equations are the easiest (easy1), (two integers between 0-9; only addition or subtraction),
--- between 5-9, then equations are easy (easy2), (three integers between 0-9; only addition or subtraction),
--- between 10 and 15, then equations are set to med1, (three integers between 0-99; only addition or subtraction),
--- between 15 and 20, then equations are set to med2, (three integers between 0-99; addition, subtraction, multiplication),
--- over 20, then equations are set to med1, (three integers between 0-99; addition, subtraction, multiplication, division).
+- If the total number of correct answers is:
+  - less than 5, then equations are the easiest (easy1), (two integers between 0-9; only addition or subtraction),
+  - between 5-9, then equations are easy (easy2), (three integers between 0-9; only addition or subtraction),
+  - between 10 and 15, then equations are set to med1, (three integers between 0-99; only addition or subtraction),
+  - between 15 and 20, then equations are set to med2, (three integers between 0-99; addition, subtraction, multiplication),
+  - over 20, then equations are set to med1, (three integers between 0-99; addition, subtraction, multiplication, division).
 
 ## Trial Time
 [code_component.py lines 85-104](https://github.com/OliJimbo/misty_py/blob/e6e290768db68a52c6d571e81b91b9856e517ead/code_component.py#L85C1-L104C1)
 - Participants start with 10 seconds per equation,
 - response time is saved for each trial,
 - after the first 5 trials,
--- trial time is set to the participants mean response time, 
--- for every three correct answers, the amount of time for each trial is reduced by 10%,
--- for every three incorrect answers, the amount of time for each trial is increased by 10%.
+ - trial time is set to the participants mean response time, 
+ - for every three correct answers, the amount of time for each trial is reduced by 10%,
+ - for every three incorrect answers, the amount of time for each trial is increased by 10%.
 <section>
     <h1>References</h1>
     <ol>
         <li id="ref-1">
-            [1] Dedovic, K., Renwick, R., Mahani, N. K., Engert, V., Lupien, S. J., &amp; Pruessner, J. C. (2005). The Montreal Imaging Stress Task: using functional imaging to investigate the effects of perceiving and processing psychosocial stress in the human brain. Journal of Psychiatry and Neuroscience, 30(5), 319.
+            Dedovic, K., Renwick, R., Mahani, N. K., Engert, V., Lupien, S. J., &amp; Pruessner, J. C. (2005). The Montreal Imaging Stress Task: using functional imaging to investigate the effects of perceiving and processing psychosocial stress in the human brain. Journal of Psychiatry and Neuroscience, 30(5), 319.
             <a href="#cite-1" aria-label="Back to reference 1">↩</a>
         </li>
         <li id="ref-2">
