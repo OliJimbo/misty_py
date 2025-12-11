@@ -14,20 +14,18 @@ The TSST requires subjects to prepare and perform a speech and answer a series o
 
 The MIST was developed to allow stress to be induced whilst subjects are scanned, and focuses on the arithmetic element of the TSST.
 
-In brief, participants are required to answer mental arithmetic questions under conditions that become progressively adverse over several dimensions.
-First, the time limit per question is adaptive.
-Participants average solution times are initially estimated and set as the time limit, and the more questions they get correct, the faster the timer decreases.
-Secondly, the more questions subjects get right, the harder the questions become.
-At their easiest, questions involve a single basic elementary operation (either + or )- on integers between 1-9, with the hardest questions having any two elementary operations (+, -, ×, or ÷) on integers between 1-99.
-Third, and most importantly, the participant constantly evaluates, and is evaluated on, performance. 
-They are presented with a progress bar that represents their performance relative to a fictitious norm group.
-Their position decreases faster than it increases, and they should be reminded periodically by the researcher that they must maintain an average (or above) performance.
+In brief, participants are required to answer mental arithmetic questions under conditions that become progressively adverse over several dimensions:
+- First, the time limit per question is adaptive. Participants average solution times are initially estimated and set as the time limit, and the more questions they get correct, the faster the timer decreases.
+- Secondly, the more questions subjects get right, the harder the questions become. At their easiest, questions involve a single basic elementary operation (either + or )- on integers between 1-9, with the hardest questions having any two elementary operations (+, -, ×, or ÷) on integers between 1-99.
+- Third, and most importantly, the participant constantly evaluates, and is evaluated on, performance. They are presented with a progress bar that represents their performance relative to a fictitious norm group. Their position decreases faster than it increases, and they should be reminded periodically by the researcher that they must maintain an average (or above) performance.
+  
 Crucially, the main stressor is not the questions themselves (although these may be for people who have maths anxiety...), but the "public" performance of the questions.
 
-<img src="./img/logo.png", alt="Misty", width="50"/> implements this procedure in PsychoPy so that it may be used in imaging studies or in the lab.
-It is distributed as a PsychoPy .psyexp file so that it can be used immediately, and adapted easily.
+<p> <img src="./img/logo.png" alt="Misty" width="50"/> implements this procedure in PsychoPy so that it may be used in imaging studies or in the lab (or even in the classroom).
+It is distributed as a PsychoPy `.psyexp` file so that it can be used immediately, and adapted easily.
 
 It also comes as a module so that it can be used with the PsychoPy API, or in Python more broadly.
+</p>
 
 Issues, pull requests, and comments are all very welcome.
 
