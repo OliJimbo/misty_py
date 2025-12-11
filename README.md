@@ -2,7 +2,7 @@
     <img src="./img/header.jpg" alt="Misty"  loading="lazy" height="200", width="800"/>
     </p>
 
-# <img src="./img/logo.png", alt="Misty", width="100"/>
+# `<img src="./img/logo.png", alt="Misty", width="100"/>`
 <img src="./img/logo.png", alt="Misty", width="50"/> is an implementation of the Montreal Imaging Stress Task described by Dedovic et al (2005)[^1].
 Perhaps the most commonly used stress inducement protocol is the Trier Social Stress Test (TSST) [^2].
 The TSST requires subjects to prepare and perform a speech and answer a series of mental arithmetic questions in front of a small audience, a procedure that is not feasible in e.g. fMRI studies in which tasks are necessarily performed in a large, noisy tube.
