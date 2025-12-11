@@ -4,7 +4,8 @@
 
 <h1> <img src="./img/logo.png", alt="Misty", width="100"/> </h1>
 
-<p> <img src="./img/logo.png", alt="Misty", width="10"/> is an implementation of the Montreal Imaging Stress Task (MIST) described by Dedovic et al (2005)<sup><a href="#ref-1" id="cite-1" aria-describedby="reference-label">1</a> </sup>.
+<p> 
+    <img src="./img/logo.png" alt="Misty" width="50" /> is an implementation of the Montreal Imaging Stress Task (MIST) described by Dedovic et al (2005)<sup><a href="#ref-1" id="cite-1" aria-describedby="reference-label">1</a> </sup>.
 </p>
 
 MIST is based on one of the most commonly used stress inducement protocols, the Trier Social Stress Test (TSST) <sup><a href="#ref-2" id="cite-2" aria-describedby="reference-label">2</a> </sup>.
