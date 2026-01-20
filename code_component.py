@@ -45,7 +45,7 @@ if len(key_resp.keys) > 0:
     this_key = int(key_resp.keys[0])
 this_resp =[slider.getRating(), this_key]
 
-if  ans in this_resp:
+if ans in this_resp:
         msg = "Correct!"  # For correct trials add one to
         streak_count += 1   # correct counter
         total_cor += 1     # and total correct.
@@ -68,13 +68,6 @@ elif ans not in this_resp: # For incorrect answers
 if pointer_pos >= 1.8:
     pointer_pos = 1.8
 
-if timeout:
-    RT = time
-else:
-    if slider.getRT() is None:
-        RT = key_resp.rt
-    else:
-        RT = slider.getRT()
 if total_cor < 5:  # Sets difficulty of sums at four steps
     difficulty = "easy1"  # just +- sums, 2 integers 0-9
 elif total_cor == 5:
@@ -88,6 +81,14 @@ elif total_cor == 20:
 
 # print(corCount)
 # print(time)
+
+if timeout:
+    RT = time
+else:
+    if slider.getRT() is None:
+        RT = key_resp.rt
+    else:
+        RT = slider.getRT()
 
 trial_counter += 1
 rt_list.append(RT)
