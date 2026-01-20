@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2025.2.3),
-    on Wed 10 Dec 2025 04:10:25 PM GMT
+    on Tue 20 Jan 2026 03:20:53 PM GMT
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -31,6 +31,10 @@ import os  # handy system and path functions
 import sys  # to get file system encoding
 
 from psychopy.hardware import keyboard
+
+# Run 'Before Experiment' code from code_2
+import serial
+sr = serial.Serial("/dev/pts/5", 115200, timeout=1)
 
 # --- Setup global variables (available in all functions) ---
 # create a device manager to handle hardware (keyboards, mice, mirophones, speakers, etc.)
@@ -387,10 +391,22 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     x, y = [None, None]
     mouse.mouseClock = core.Clock()
     
+    # --- Initialize components for Routine "fixation" ---
+    # Run 'Begin Experiment' code from code_2
+    sr.write("RR".encode())
+    core.wait(0.025) #wait 25 mS after resetting
+    sr.write("01".encode()) #Exp started
+    fix = visual.TextStim(win=win, name='fix',
+        text='+',
+        font='Open Sans',
+        pos=(0, 0), draggable=False, height=0.1, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-1.0);
+    
     # --- Initialize components for Routine "sum_routine1" ---
     # Run 'Begin Experiment' code from code
     import misty
-    
     # Set variables
     pointer_pos = 0  # x position of pointer
     msg = ""  # feedback message
@@ -402,7 +418,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     difficulty = "easy1"  # diffculty of equation
     time_coef = 1  # amount to reduce trial time by
     trial_counter = 0  # current trial
-    
+    ### Check for serial connection
+    evntlg = 'ser' in locals() or 'ser' in globals()
+    if evntlg :    difbyt="03".encode()
     prog = visual.Progress(
         win, name='prog',
         progress=0.0,
@@ -736,6 +754,140 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             for paramName in thisTrial:
                 globals()[paramName] = thisTrial[paramName]
         
+        # --- Prepare to start Routine "fixation" ---
+        # create an object to store info about Routine fixation
+        fixation = data.Routine(
+            name='fixation',
+            components=[fix],
+        )
+        fixation.status = NOT_STARTED
+        continueRoutine = True
+        # update component parameters for each repeat
+        # Run 'Begin Routine' code from code_2
+        sr.write("00".encode()) #turn all lines off
+        core.wait(0.025) #wait 25 mS after signal
+        sr.write("02".encode()) #Fixation signal
+        
+        # store start times for fixation
+        fixation.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+        fixation.tStart = globalClock.getTime(format='float')
+        fixation.status = STARTED
+        thisExp.addData('fixation.started', fixation.tStart)
+        fixation.maxDuration = None
+        # keep track of which components have finished
+        fixationComponents = fixation.components
+        for thisComponent in fixation.components:
+            thisComponent.tStart = None
+            thisComponent.tStop = None
+            thisComponent.tStartRefresh = None
+            thisComponent.tStopRefresh = None
+            if hasattr(thisComponent, 'status'):
+                thisComponent.status = NOT_STARTED
+        # reset timers
+        t = 0
+        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+        frameN = -1
+        
+        # --- Run Routine "fixation" ---
+        thisExp.currentRoutine = fixation
+        fixation.forceEnded = routineForceEnded = not continueRoutine
+        while continueRoutine and routineTimer.getTime() < 0.5:
+            # if trial has changed, end Routine now
+            if hasattr(thisTrial, 'status') and thisTrial.status == STOPPING:
+                continueRoutine = False
+            # get current time
+            t = routineTimer.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+            # update/draw components on each frame
+            
+            # *fix* updates
+            
+            # if fix is starting this frame...
+            if fix.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                fix.frameNStart = frameN  # exact frame index
+                fix.tStart = t  # local t and not account for scr refresh
+                fix.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(fix, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'fix.started')
+                # update status
+                fix.status = STARTED
+                fix.setAutoDraw(True)
+            
+            # if fix is active this frame...
+            if fix.status == STARTED:
+                # update params
+                pass
+            
+            # if fix is stopping this frame...
+            if fix.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > fix.tStartRefresh + 0.5-frameTolerance:
+                    # keep track of stop time/frame for later
+                    fix.tStop = t  # not accounting for scr refresh
+                    fix.tStopRefresh = tThisFlipGlobal  # on global time
+                    fix.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'fix.stopped')
+                    # update status
+                    fix.status = FINISHED
+                    fix.setAutoDraw(False)
+            
+            # check for quit (typically the Esc key)
+            if defaultKeyboard.getKeys(keyList=["escape"]):
+                thisExp.status = FINISHED
+            if thisExp.status == FINISHED or endExpNow:
+                endExperiment(thisExp, win=win)
+                return
+            # pause experiment here if requested
+            if thisExp.status == PAUSED:
+                pauseExperiment(
+                    thisExp=thisExp, 
+                    win=win, 
+                    timers=[routineTimer, globalClock], 
+                    currentRoutine=fixation,
+                )
+                # skip the frame we paused on
+                continue
+            
+            # has a Component requested the Routine to end?
+            if not continueRoutine:
+                fixation.forceEnded = routineForceEnded = True
+            # has the Routine been forcibly ended?
+            if fixation.forceEnded or routineForceEnded:
+                break
+            # has every Component finished?
+            continueRoutine = False
+            for thisComponent in fixation.components:
+                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                    continueRoutine = True
+                    break  # at least one component has not yet finished
+            
+            # refresh the screen
+            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                win.flip()
+        
+        # --- Ending Routine "fixation" ---
+        for thisComponent in fixation.components:
+            if hasattr(thisComponent, "setAutoDraw"):
+                thisComponent.setAutoDraw(False)
+        # store stop times for fixation
+        fixation.tStop = globalClock.getTime(format='float')
+        fixation.tStopRefresh = tThisFlipGlobal
+        thisExp.addData('fixation.stopped', fixation.tStop)
+        # Run 'End Routine' code from code_2
+        sr.write("00".encode()) #set lines to zero
+        # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+        if fixation.maxDurationReached:
+            routineTimer.addTime(-fixation.maxDuration)
+        elif fixation.forceEnded:
+            routineTimer.reset()
+        else:
+            routineTimer.addTime(-0.500000)
+        
         # --- Prepare to start Routine "sum_routine1" ---
         # create an object to store info about Routine sum_routine1
         sum_routine1 = data.Routine(
@@ -754,6 +906,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         ans = int(x.ans)
         timeout = False
         
+        # If serial object is loaded then use it
+        if evntlg :    sr.write(difbyt)
         arrow.setPos((1-pointer_pos, 0.6))
         textbox.reset()
         textbox.setText(eq)
@@ -1128,6 +1282,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         sum_routine1.tStopRefresh = tThisFlipGlobal
         thisExp.addData('sum_routine1.stopped', sum_routine1.tStop)
         # Run 'End Routine' code from code
+        # Set serial to 0 if running
+        if evntlg:  sr.write("00".encode())
+        
         # Set variables and adjust pointer
         this_key = "emp"
         if len(key_resp.keys) > 0:
@@ -1135,11 +1292,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         this_resp =[slider.getRating(), this_key]
         
         if  ans in this_resp:
-                msg = "Correct!"  # For correct trials add one to
-                streak_count += 1   # correct counter
-                total_cor += 1     # and total correct.
-                pointer_pos -= 0.005  # increase userAverage pointer by 0.05
-        
+            msg = "Correct!"  # For correct trials add one to
+            streak_count += 1   # correct counter
+            total_cor += 1     # and total correct.
+            pointer_pos -= 0.005  # increase userAverage pointer by 0.05
+                
         elif (timeout is True):
             msg = "Time-Out!"
             if streak_count < 0:
@@ -1166,14 +1323,19 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 RT = slider.getRT()
         if total_cor < 5:  # Sets difficulty of sums at four steps
             difficulty = "easy1"  # just +- sums, 2 integers 0-9
+            if evntlg :    difbyt="03".encode()
         elif total_cor == 5:
             difficulty = "easy2"  # just +- sums, 3 integers 0-9
+            if evntlg :    difbyt="04".encode()
         elif total_cor == 10:
             difficulty = "med1"  # +-* sums, 3 integers 0-9
+            if evntlg :    difbyt="05".encode()
         elif total_cor == 15:
             difficulty = "med2"  # +-* sums, 3 integers 0-99
+            if evntlg :    difbyt="06".encode()
         elif total_cor == 20:
             difficulty = "hard"  # +-/* sums, 3 integers 0-99
+            if evntlg :    difbyt="07".encode()
         
         # print(corCount)
         # print(time)
@@ -1352,6 +1514,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     if thisSession is not None:
         # if running in a Session with a Liaison client, send data up to now
         thisSession.sendExperimentData()
+    # Run 'End Experiment' code from code_2
+    sr.flush()
+    sr.close()
     
     # mark experiment as finished
     endExperiment(thisExp, win=win)
