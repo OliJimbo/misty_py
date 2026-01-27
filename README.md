@@ -97,28 +97,6 @@ The rules are currently set to the following:
  - for every three correct answers, the amount of time for each trial is reduced by 10%,
  - for every three incorrect answers, the amount of time for each trial is increased by 10%.
 
-## Event Logging
-The dev branch version currently has event logging enabled
-This has been tested with a BIOPAC MP36 device and BBTK USB-TTL module.
-Currently the program crudely uses `try` and `except` statements to check for a serial link.
-This happens at the start of the experiment and can be managed in the `code_2` component in the `fixation` routine.
-
-If there is a module connected to the port then it sends digital signals on the following events:
-
-- Experiment start (encoded as 0F - can trigger recording),
-- Fixation cross (encoded as 01) ,
-- End of routine (encoded as 00).
-- Equation presentation (encoded by the variable `difbyt` which takes the values detailed below,
- 
-The difficulty of the equation is encoded by the following:
-- easy1 = 02,
-- easy2 = 03,
-- med1 = 04,
-- med2 = 05,
-- hard = 06.
-
-These values are set in the 'End routine' tab of the `sum_routine1` code component 
-
 <section>
     <h1>References</h1>
     <ol>
