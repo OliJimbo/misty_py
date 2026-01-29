@@ -1,0 +1,61 @@
+3.7608 	DEBUG 	Fullscreen settings ignored as running in pilot mode.
+3.7618 	INFO 	Loaded monitor calibration from ['2025_12_08 16:52']
+4.1029 	INFO 	Using renderer 'NVIDIA GeForce GTX 1660/PCIe/SSE2' for graphics
+4.1029 	INFO 	OpenGL version supported by driver is 4..
+4.1093 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=True, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x747a0ff7d7e0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x747a0ff7d780>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7479fee2b9d0>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(560.0), np.float64(240.0)], screen=0, size=array([800, 600]), stencilBits=8, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+4.1094 	EXP 	window1: backgroundImage = ''
+4.1095 	EXP 	window1: backgroundFit = 'none'
+4.1210 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1225 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1241 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1258 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1276 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1288 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1303 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1320 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1329 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1339 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1354 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1369 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1383 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1397 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1411 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1426 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1441 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1452 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1463 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1481 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1492 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1496 	DEBUG 	Uploading Texture Font fontname to graphics card
+4.1569 	DEBUG 	Upload of Texture Font fontname complete
+4.1674 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1693 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1710 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.1715 	DEBUG 	Uploading Texture Font fontname to graphics card
+4.1759 	DEBUG 	Upload of Texture Font fontname complete
+4.1788 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+4.1788 	EXP 	window1: recordFrameIntervals = False
+4.3475 	EXP 	window1: recordFrameIntervals = True
+4.5310 	EXP 	Screen (0) actual frame rate measured at 60.00Hz
+4.5311 	EXP 	window1: recordFrameIntervals = False
+4.5411 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5426 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5442 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5461 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5481 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5500 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5512 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5530 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5548 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5566 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5571 	DEBUG 	Uploading Texture Font fontname to graphics card
+4.5585 	DEBUG 	Upload of Texture Font fontname complete
+4.5823 	INFO 	keyboard.Keyboard is using ptb backend.
+4.5824 	EXP 	misty_module: status = STARTED
+4.6414 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+4.7725 	EXP 	Created intstructs = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='intstructs', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+4.7834 	EXP 	Created fix = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=np.float64(0.1), italic=False, languageStyle='LTR', name='fix', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+4.7987 	DEBUG 	Saving data for misty_module ExperimentHandler
+4.7990 	INFO 	saved data to /home/hackerman/misty_py/data/pilot_misty_module_2026-01-29_18h22.54.712.psydat
+4.7992 	INFO 	saved data to '/home/hackerman/misty_py/data/pilot_misty_module_2026-01-29_18h22.54.712.csv'
+4.8040 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.

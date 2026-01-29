@@ -1,0 +1,206 @@
+4.3501 	DEBUG 	Fullscreen settings ignored as running in pilot mode.
+4.3520 	INFO 	Loaded monitor calibration from ['2025_12_08 16:52']
+4.8918 	INFO 	Using renderer 'NVIDIA GeForce GTX 1660/PCIe/SSE2' for graphics
+4.8918 	INFO 	OpenGL version supported by driver is 4..
+4.9408 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=True, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x7d514f662290>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x7d514f662230>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7d514659c460>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(560.0), np.float64(240.0)], screen=0, size=array([800, 600]), stencilBits=8, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+4.9409 	EXP 	window1: backgroundImage = ''
+4.9409 	EXP 	window1: backgroundFit = 'none'
+4.9520 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9535 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9550 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9568 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9586 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9597 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9611 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9628 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9637 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9647 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9662 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9676 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9690 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9705 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9718 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9733 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9748 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9759 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9770 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9788 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9798 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9803 	DEBUG 	Uploading Texture Font fontname to graphics card
+4.9872 	DEBUG 	Upload of Texture Font fontname complete
+4.9974 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9992 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.0009 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.0013 	DEBUG 	Uploading Texture Font fontname to graphics card
+5.0056 	DEBUG 	Upload of Texture Font fontname complete
+5.0082 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+5.0082 	EXP 	window1: recordFrameIntervals = False
+5.1691 	EXP 	window1: recordFrameIntervals = True
+5.3526 	EXP 	Screen (0) actual frame rate measured at 60.00Hz
+5.3526 	EXP 	window1: recordFrameIntervals = False
+5.3622 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.3636 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.3653 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.3672 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.3691 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.3712 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.3724 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.3742 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.3761 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.3779 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.3784 	DEBUG 	Uploading Texture Font fontname to graphics card
+5.3799 	DEBUG 	Upload of Texture Font fontname complete
+5.4051 	INFO 	keyboard.Keyboard is using ptb backend.
+5.4052 	EXP 	misty_module: status = STARTED
+5.4781 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+5.5894 	EXP 	Created intstructs = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='intstructs', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+5.5982 	EXP 	Created fix = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=np.float64(0.1), italic=False, languageStyle='LTR', name='fix', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+5.6269 	EXP 	Created prog_3 = Progress(__class__=<class 'psychopy.visual.progress.Progress'>, anchor=('left', 'top'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-1, draggable=False, fillColor=array([-1.    ,  0.5373, -1.    ]), fillColorSpace='rgb', fillRGB=array([-1.    ,  0.5373, -1.    ]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=4.0, name='prog_3', opacity=1.0, ori=0.0, pos=array([-0.5,  0.5]), size=array([1. , 0.1]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+5.6315 	EXP 	Created prog_3Bar = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('left', 'top'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-1, draggable=False, fillColor=array([ 1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([ 1., -1., -1.]), interpolate=True, lineColor=array([0., 0., 0.]), lineColorSpace='rgb', lineRGB=array([0, 0, 0]), lineWidth=1.5, name='prog_3Bar', opacity=1.0, ori=0.0, pos=array([-0.5,  0.5]), size=array([1. , 0.1]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+5.6355 	EXP 	Created greenbar_3 = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('left', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-2.0, draggable=False, fillColor=array([-1.    ,  0.0039, -1.    ]), fillColorSpace='rgb', fillRGB=array([-1.    ,  0.0039, -1.    ]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='greenbar_3', opacity=1, ori=0.0, pos=array([0.33333333, 0.7       ]), size=array([0.66666667, 0.1       ]), units='norm', vertices=ndarray(...), win=Window(...))
+5.6382 	EXP 	Created yellowbar_3 = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('left', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-3.0, draggable=False, fillColor=array([ 1.,  1., -1.]), fillColorSpace='rgb', fillRGB=array([ 1.,  1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='yellowbar_3', opacity=1, ori=0.0, pos=array([-0.33333333,  0.7       ]), size=array([0.66666667, 0.1       ]), units='norm', vertices=ndarray(...), win=Window(...))
+5.6405 	EXP 	Created redbar_3 = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('left', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-4.0, draggable=False, fillColor=array([ 1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([ 1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='redbar_3', opacity=1, ori=0.0, pos=array([-1. ,  0.7]), size=array([0.66666667, 0.1       ]), units='norm', vertices=ndarray(...), win=Window(...))
+5.6434 	EXP 	Created arrow_3 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-5.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='arrow_3', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.05, 0.05]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+5.6470 	WARNING 	Font b'Arial' was requested. No similar font found.
+5.6531 	WARNING 	Font b'Arial' was requested. No similar font found.
+5.6562 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.6577 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.6591 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.6603 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.6609 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.6616 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.6630 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.6640 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.6647 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.6651 	DEBUG 	Uploading Texture Font fontname to graphics card
+5.6700 	DEBUG 	Upload of Texture Font fontname complete
+5.7109 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.7112 	DEBUG 	Uploading Texture Font fontname to graphics card
+5.7129 	DEBUG 	Upload of Texture Font fontname complete
+5.7200 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.7212 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.7223 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.7234 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.7243 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.7252 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.7263 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.7272 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.7283 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.7292 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.7296 	DEBUG 	Uploading Texture Font fontname to graphics card
+5.7309 	DEBUG 	Upload of Texture Font fontname complete
+5.7380 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.7383 	DEBUG 	Uploading Texture Font fontname to graphics card
+5.7428 	DEBUG 	Upload of Texture Font fontname complete
+5.7563 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.7566 	DEBUG 	Uploading Texture Font fontname to graphics card
+5.7579 	DEBUG 	Upload of Texture Font fontname complete
+5.7711 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.7714 	DEBUG 	Uploading Texture Font fontname to graphics card
+5.7728 	DEBUG 	Upload of Texture Font fontname complete
+5.7861 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.7864 	DEBUG 	Uploading Texture Font fontname to graphics card
+5.7877 	DEBUG 	Upload of Texture Font fontname complete
+5.8009 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.8012 	DEBUG 	Uploading Texture Font fontname to graphics card
+5.8025 	DEBUG 	Upload of Texture Font fontname complete
+5.8157 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.8160 	DEBUG 	Uploading Texture Font fontname to graphics card
+5.8174 	DEBUG 	Upload of Texture Font fontname complete
+5.8306 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.8309 	DEBUG 	Uploading Texture Font fontname to graphics card
+5.8322 	DEBUG 	Upload of Texture Font fontname complete
+5.8454 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.8457 	DEBUG 	Uploading Texture Font fontname to graphics card
+5.8471 	DEBUG 	Upload of Texture Font fontname complete
+5.8603 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.8606 	DEBUG 	Uploading Texture Font fontname to graphics card
+5.8620 	DEBUG 	Upload of Texture Font fontname complete
+5.9266 	EXP 	Created slider_3 = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-7, fillColor=None, flip=False, font='Noto Sans', granularity=1, labelColor=None, labelHeight=np.float64(0.05), labelWrapWidth=None, labels=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9), lineColor=None, markerColor=None, name='slider_3', opacity=None, ori=0.0, pos=array([ 0. , -0.4]), readOnly=False, self=UNKNOWN, size=array([1. , 0.1]), startValue=None, style='choice', styleTweaks=[], ticks=array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]), units='norm', win=Window(...))
+5.9296 	WARNING 	Font b'Arial' was requested. No similar font found.
+5.9352 	WARNING 	Font b'Arial' was requested. No similar font found.
+5.9407 	EXP 	Created fix = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=np.float64(0.1), italic=False, languageStyle='LTR', name='fix', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+5.9432 	EXP 	Created prog_2 = Progress(__class__=<class 'psychopy.visual.progress.Progress'>, anchor=('left', 'top'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-1, draggable=False, fillColor=array([-1.    ,  0.5373, -1.    ]), fillColorSpace='rgb', fillRGB=array([-1.    ,  0.5373, -1.    ]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=4.0, name='prog_2', opacity=1.0, ori=0.0, pos=array([-0.5,  0.5]), size=array([1. , 0.1]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+5.9454 	EXP 	Created prog_2Bar = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('left', 'top'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-1, draggable=False, fillColor=array([ 1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([ 1., -1., -1.]), interpolate=True, lineColor=array([0., 0., 0.]), lineColorSpace='rgb', lineRGB=array([0, 0, 0]), lineWidth=1.5, name='prog_2Bar', opacity=1.0, ori=0.0, pos=array([-0.5,  0.5]), size=array([1. , 0.1]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+5.9475 	EXP 	Created greenbar_2 = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('left', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-2.0, draggable=False, fillColor=array([-1.    ,  0.0039, -1.    ]), fillColorSpace='rgb', fillRGB=array([-1.    ,  0.0039, -1.    ]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='greenbar_2', opacity=1, ori=0.0, pos=array([0.33333333, 0.7       ]), size=array([0.66666667, 0.1       ]), units='norm', vertices=ndarray(...), win=Window(...))
+5.9494 	EXP 	Created yellowbar_2 = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('left', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-3.0, draggable=False, fillColor=array([ 1.,  1., -1.]), fillColorSpace='rgb', fillRGB=array([ 1.,  1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='yellowbar_2', opacity=1, ori=0.0, pos=array([-0.33333333,  0.7       ]), size=array([0.66666667, 0.1       ]), units='norm', vertices=ndarray(...), win=Window(...))
+5.9516 	EXP 	Created redbar_2 = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('left', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-4.0, draggable=False, fillColor=array([ 1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([ 1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='redbar_2', opacity=1, ori=0.0, pos=array([-1. ,  0.7]), size=array([0.66666667, 0.1       ]), units='norm', vertices=ndarray(...), win=Window(...))
+5.9539 	EXP 	Created arrow_2 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-5.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='arrow_2', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.05, 0.05]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+5.9567 	WARNING 	Font b'Arial' was requested. No similar font found.
+5.9622 	WARNING 	Font b'Arial' was requested. No similar font found.
+6.1471 	EXP 	Created slider_2 = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-7, fillColor=None, flip=False, font='Noto Sans', granularity=1, labelColor=None, labelHeight=np.float64(0.05), labelWrapWidth=None, labels=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9), lineColor=None, markerColor=None, name='slider_2', opacity=None, ori=0.0, pos=array([ 0. , -0.4]), readOnly=False, self=UNKNOWN, size=array([1. , 0.1]), startValue=None, style='choice', styleTweaks=[], ticks=array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]), units='norm', win=Window(...))
+6.1501 	WARNING 	Font b'Arial' was requested. No similar font found.
+6.1557 	WARNING 	Font b'Arial' was requested. No similar font found.
+6.1613 	EXP 	Created fix = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=np.float64(0.1), italic=False, languageStyle='LTR', name='fix', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+6.1637 	EXP 	Created prog = Progress(__class__=<class 'psychopy.visual.progress.Progress'>, anchor=('left', 'top'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-1, draggable=False, fillColor=array([-1.    ,  0.5373, -1.    ]), fillColorSpace='rgb', fillRGB=array([-1.    ,  0.5373, -1.    ]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=4.0, name='prog', opacity=1.0, ori=0.0, pos=array([-0.5,  0.5]), size=array([1. , 0.1]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+6.1660 	EXP 	Created progBar = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('left', 'top'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-1, draggable=False, fillColor=array([ 1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([ 1., -1., -1.]), interpolate=True, lineColor=array([0., 0., 0.]), lineColorSpace='rgb', lineRGB=array([0, 0, 0]), lineWidth=1.5, name='progBar', opacity=1.0, ori=0.0, pos=array([-0.5,  0.5]), size=array([1. , 0.1]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+6.1680 	EXP 	Created greenbar = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('left', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-2.0, draggable=False, fillColor=array([-1.    ,  0.0039, -1.    ]), fillColorSpace='rgb', fillRGB=array([-1.    ,  0.0039, -1.    ]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='greenbar', opacity=1, ori=0.0, pos=array([0.33333333, 0.7       ]), size=array([0.66666667, 0.1       ]), units='norm', vertices=ndarray(...), win=Window(...))
+6.1698 	EXP 	Created yellowbar = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('left', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-3.0, draggable=False, fillColor=array([ 1.,  1., -1.]), fillColorSpace='rgb', fillRGB=array([ 1.,  1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='yellowbar', opacity=1, ori=0.0, pos=array([-0.33333333,  0.7       ]), size=array([0.66666667, 0.1       ]), units='norm', vertices=ndarray(...), win=Window(...))
+6.1717 	EXP 	Created redbar = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('left', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-4.0, draggable=False, fillColor=array([ 1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([ 1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='redbar', opacity=1, ori=0.0, pos=array([-1. ,  0.7]), size=array([0.66666667, 0.1       ]), units='norm', vertices=ndarray(...), win=Window(...))
+6.1740 	EXP 	Created arrow = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-5.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='arrow', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.05, 0.05]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+6.1767 	WARNING 	Font b'Arial' was requested. No similar font found.
+6.1822 	WARNING 	Font b'Arial' was requested. No similar font found.
+6.3655 	EXP 	Created slider = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-7, fillColor=None, flip=False, font='Noto Sans', granularity=1, labelColor=None, labelHeight=np.float64(0.05), labelWrapWidth=None, labels=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9), lineColor=None, markerColor=None, name='slider', opacity=None, ori=0.0, pos=array([ 0. , -0.4]), readOnly=False, self=UNKNOWN, size=array([1. , 0.1]), startValue=None, style='choice', styleTweaks=[], ticks=array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]), units='norm', win=Window(...))
+6.3684 	WARNING 	Font b'Arial' was requested. No similar font found.
+6.3743 	WARNING 	Font b'Arial' was requested. No similar font found.
+0.0105 	EXP 	prog_3: direction = 'horizontal'
+0.0105 	EXP 	prog_3: progress = 0.0
+0.0105 	EXP 	textbox_4: autoLog = True
+0.0105 	EXP 	slider_3: autoLog = True
+0.0105 	EXP 	slider_3: styleTweaks = []
+0.0105 	EXP 	slider_3: styleTweaks = []
+0.0105 	EXP 	slider_3: styleTweaks = []
+0.0105 	EXP 	slider_3: styleTweaks = []
+0.0105 	EXP 	slider_3: contrast = 1.0
+0.0105 	EXP 	slider_3: markerPos = None
+0.0105 	EXP 	slider_3: autoLog = True
+0.0105 	EXP 	textbox_2: autoLog = True
+0.0105 	EXP 	prog_2: direction = 'horizontal'
+0.0105 	EXP 	prog_2: progress = 0.0
+0.0105 	EXP 	textbox_3: autoLog = True
+0.0105 	EXP 	slider_2: autoLog = True
+0.0105 	EXP 	slider_2: styleTweaks = []
+0.0105 	EXP 	slider_2: styleTweaks = []
+0.0105 	EXP 	slider_2: styleTweaks = []
+0.0105 	EXP 	slider_2: styleTweaks = []
+0.0105 	EXP 	slider_2: contrast = 1.0
+0.0105 	EXP 	slider_2: markerPos = None
+0.0105 	EXP 	slider_2: autoLog = True
+0.0105 	EXP 	textbox_2: autoLog = True
+0.0105 	EXP 	prog: direction = 'horizontal'
+0.0105 	EXP 	prog: progress = 0.0
+0.0105 	EXP 	textbox: autoLog = True
+0.0105 	EXP 	slider: autoLog = True
+0.0105 	EXP 	slider: styleTweaks = []
+0.0105 	EXP 	slider: styleTweaks = []
+0.0105 	EXP 	slider: styleTweaks = []
+0.0105 	EXP 	slider: styleTweaks = []
+0.0105 	EXP 	slider: contrast = 1.0
+0.0105 	EXP 	slider: markerPos = None
+0.0105 	EXP 	slider: autoLog = True
+0.0105 	EXP 	textbox_2: autoLog = True
+0.0264 	INFO 	Keyboard events cleared
+0.0262 	EXP 	text: autoDraw = True
+1.3802 	DATA 	Keypress: l
+1.3985 	EXP 	Device response: <KeyPress from None: t=1.3790841102600098, value=l, duration=None>
+1.4098 	INFO 	Keyboard events cleared
+1.4096 	EXP 	text: autoDraw = False
+1.4096 	EXP 	intstructs: autoDraw = True
+1.4788 	EXP 	Device response: <KeyPress from None: t=1.3790841102600098, value=l, duration=0.09456992149353027>
+1.7622 	EXP 	Device response: <KeyPress from None: t=1.7579154968261719, value=space, duration=None>
+1.7626 	DATA 	Keypress: space
+1.7653 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+1.7758 	EXP 	intstructs: autoDraw = False
+1.7758 	EXP 	fix: autoDraw = True
+1.8627 	EXP 	Device response: <KeyPress from None: t=1.7579154968261719, value=space, duration=0.09476852416992188>
+2.2657 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.2666 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.2679 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.2690 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.2703 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.2707 	DEBUG 	Uploading Texture Font fontname to graphics card
+2.2715 	DEBUG 	Upload of Texture Font fontname complete
+2.2952 	DEBUG 	Saving data for misty_module ExperimentHandler
+2.2961 	INFO 	saved data to /home/hackerman/misty_py/data/pilot_misty_module_2026-01-29_17h36.56.226.psydat
+2.2967 	INFO 	saved data to '/home/hackerman/misty_py/data/pilot_misty_module_2026-01-29_17h36.56.226.csv'
+2.3015 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
