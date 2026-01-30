@@ -1,6 +1,6 @@
-train_diff
-easy1
-easy2
-med1
-med2
-hard
+train_diff,train_time
+easy1,5
+easy2,5
+med1,5
+med2,5
+hard,5

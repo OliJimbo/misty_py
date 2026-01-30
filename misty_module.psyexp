@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2025.2.3">
+<PsychoPy2experiment encoding="utf-8" version="2025.2.4">
   <Settings>
     <Param val="ptb" valType="str" updates="None" name="Audio lib"/>
     <Param val="" valType="str" updates="None" name="Completed URL"/>
@@ -184,8 +184,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="import misty&amp;#10;#Set sum for this repetition&amp;#10;x = misty.MistSums()&amp;#10;# Set variables&amp;#10;pointer_pos = 0  # x position of pointer&amp;#10;msg = &quot;&quot;  # feedback message&amp;#10;eq = &quot;&quot;  # equation string&amp;#10;streak_count = 0  # current streak&amp;#10;total_cor = 0  # total number of correct answers&amp;#10;rt_list = []  # list of reaction times&amp;#10;time = 10  # starting value for trial time&amp;#10;difficulty = &quot;easy1&quot;  # diffculty of equation&amp;#10;time_coef = 1  # amount to reduce trial time by&amp;#10;trial_counter = 0  # current trial&amp;#10;### Check for serial connection&amp;#10;evntlg = 'sr' in locals() or 'sr' in globals()&amp;#10;if evntlg :    difbyt=&quot;02&quot;.encode()" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="import * as misty from 'misty';&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;x = new misty.MistSums();&amp;#10;pointer_pos = 0;&amp;#10;msg = &quot;&quot;;&amp;#10;eq = &quot;&quot;;&amp;#10;streak_count = 0;&amp;#10;total_cor = 0;&amp;#10;rt_list = [];&amp;#10;time = 10;&amp;#10;difficulty = &quot;easy1&quot;;&amp;#10;time_coef = 1;&amp;#10;trial_counter = 0;&amp;#10;evntlg = (_pj.in_es6(&quot;sr&quot;, locals()) || _pj.in_es6(&quot;sr&quot;, globals()));&amp;#10;if (evntlg) {&amp;#10;    difbyt = &quot;02&quot;.encode();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="msg = &quot;&quot;;&amp;#10;timer = new core.CountdownTimer(time);&amp;#10;x = new misty.MistSums();&amp;#10;x.make_equation(difficulty);&amp;#10;eq = `${x.equation}`;&amp;#10;ans = Number.parseInt(x.ans);&amp;#10;timeout = false;&amp;#10;if (evntlg) {&amp;#10;    sr.write(difbyt);&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="msg = &quot;&quot;&amp;#10;timer = core.CountdownTimer(time)&amp;#10;x = misty.MistSums()&amp;#10;x.make_equation(difficulty)&amp;#10;eq = &quot;%s = ?&quot; %(x.equation)&amp;#10;ans = int(x.ans)&amp;#10;timeout = False&amp;#10;&amp;#10;# If serial object is loaded then use it&amp;#10;if evntlg :    sr.write(difbyt)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="&amp;#10;        // add-on: list(s: string): string[]&amp;#10;        function list(s) {&amp;#10;            // if s is a string, we return a list of its characters&amp;#10;            if (typeof s === 'string')&amp;#10;                return s.split('');&amp;#10;            else&amp;#10;                // otherwise we return s:&amp;#10;                return s;&amp;#10;        }&amp;#10;&amp;#10;        msg = &quot;&quot;;&amp;#10;console.log(trials_3.thisN);&amp;#10;if ((trials_3.thisN === 0)) {&amp;#10;    train_rt_list = list(filter(null, train_rt_list));&amp;#10;    time = (np.mean(train_rt_list) * time_coef);&amp;#10;}&amp;#10;timer = new core.CountdownTimer(time);&amp;#10;x = new misty.MistSums();&amp;#10;x.make_equation(difficulty);&amp;#10;eq = `${x.equation}`;&amp;#10;ans = Number.parseInt(x.ans);&amp;#10;timeout = false;&amp;#10;if (evntlg) {&amp;#10;    sr.write(difbyt);&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="msg = &quot;&quot;&amp;#10;print(trials_3.thisN)&amp;#10;if trials_3.thisN == 0:&amp;#10;    train_rt_list = list(filter(None, train_rt_list))&amp;#10;    time = np.mean(train_rt_list) * time_coef&amp;#10;timer = core.CountdownTimer(time)&amp;#10;x = misty.MistSums()&amp;#10;x.make_equation(difficulty)&amp;#10;eq = &quot;%s = ?&quot; %(x.equation)&amp;#10;ans = int(x.ans)&amp;#10;timeout = False&amp;#10;&amp;#10;# If serial object is loaded then use it&amp;#10;if evntlg :    sr.write(difbyt)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="if timer.getTime() &lt;= 0:&amp;#10;    continueRoutine = False&amp;#10;    timeout = True&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="if ((timer.getTime() &lt;= 0)) {&amp;#10;    continueRoutine = false;&amp;#10;    timeout = true;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -662,15 +662,15 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="import misty&amp;#10;train_gen=misty.MistSums()&amp;#10;train_rt_list = [] &amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="import * as misty from 'misty';&amp;#10;train_gen = new misty.MistSums();&amp;#10;train_rt_list = [];&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="msg = &quot;&quot;;&amp;#10;if ((trials_2.thisTrialN === 0)) {&amp;#10;    trialTimer = new core.CountdownTimer(60);&amp;#10;}&amp;#10;train_gen.make_equation(train_diff);&amp;#10;eq = `${train_gen.equation}`;&amp;#10;ans = Number.parseInt(train_gen.ans);&amp;#10;if (evntlg) {&amp;#10;    sr.write(difbyt);&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="msg = &quot;&quot;&amp;#10;&amp;#10;if trials_2.thisTrialN==0:&amp;#10;    trialTimer=core.CountdownTimer(60)&amp;#10;&amp;#10;#Generate response&amp;#10;train_gen.make_equation(train_diff)&amp;#10;eq = &quot;%s = ?&quot; %(train_gen.equation)&amp;#10;ans = int(train_gen.ans)&amp;#10;&amp;#10;# If serial object is loaded then use it&amp;#10;if evntlg :    sr.write(difbyt)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="msg = &quot;&quot;;&amp;#10;console.log(trials_2.thisTrialN);&amp;#10;if ((trials_2.thisN === 0)) {&amp;#10;    trialTimer = new core.CountdownTimer(train_time);&amp;#10;}&amp;#10;train_gen.make_equation(train_diff);&amp;#10;eq = `${train_gen.equation}`;&amp;#10;ans = Number.parseInt(train_gen.ans);&amp;#10;if (evntlg) {&amp;#10;    sr.write(difbyt);&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="msg = &quot;&quot;&amp;#10;print(trials_2.thisTrialN)&amp;#10;if trials_2.thisN==0:&amp;#10;    trialTimer=core.CountdownTimer(train_time)&amp;#10;&amp;#10;#Generate response&amp;#10;train_gen.make_equation(train_diff)&amp;#10;eq = &quot;%s = ?&quot; %(train_gen.equation)&amp;#10;ans = int(train_gen.ans)&amp;#10;&amp;#10;# If serial object is loaded then use it&amp;#10;if evntlg :    sr.write(difbyt)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="if trialTimer.getTime() &lt;= 0:&amp;#10;    prac_trials.finished = True&amp;#10;    continueRoutine = False&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="if ((trialTimer.getTime() &lt;= 0)) {&amp;#10;    prac_trials.finished = true;&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="if trialTimer.getTime() &lt;= 0:&amp;#10;    continueRoutine = False&amp;#10;    trials_2.finished = True&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="if ((trialTimer.getTime() &lt;= 0)) {&amp;#10;    continueRoutine = false;&amp;#10;    trials_2.finished = true;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;if (evntlg) {&amp;#10;    sr.write(&quot;00&quot;.encode());&amp;#10;}&amp;#10;this_key = &quot;emp&quot;;&amp;#10;if ((key_resp_train.keys.length &gt; 0)) {&amp;#10;    this_key = Number.parseInt(key_resp_train.keys[0]);&amp;#10;}&amp;#10;this_resp = [slider.getRating(), this_key];&amp;#10;if (_pj.in_es6(ans, this_resp)) {&amp;#10;    msg = &quot;Correct!&quot;;&amp;#10;} else {&amp;#10;    if ((! _pj.in_es6(ans, this_resp))) {&amp;#10;        msg = &quot;Incorrect!&quot;;&amp;#10;    }&amp;#10;}&amp;#10;if ((slider.getRT() === null)) {&amp;#10;    RT = key_resp.rt;&amp;#10;} else {&amp;#10;    RT = slider.getRT();&amp;#10;}&amp;#10;train_rt_list.push(RT);&amp;#10;psychoJS.experiment.addData(&quot;trial.outcome&quot;, msg);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="# Set serial to 0 if running&amp;#10;if evntlg:  sr.write(&quot;00&quot;.encode())&amp;#10;&amp;#10;# Set variables and adjust pointer&amp;#10;this_key = &quot;emp&quot;&amp;#10;if len(key_resp_train.keys) &gt; 0:&amp;#10;    this_key = int(key_resp_train.keys[0])&amp;#10;this_resp =[slider.getRating(), this_key]&amp;#10;&amp;#10;if  ans in this_resp:&amp;#10;    msg = &quot;Correct!&quot;  # For correct trials add one to&amp;#10;        &amp;#10;elif ans not in this_resp: # For incorrect answers&amp;#10;    msg = &quot;Incorrect!&quot;&amp;#10;  &amp;#10;if slider.getRT() is None:&amp;#10;    RT = key_resp.rt&amp;#10;else:&amp;#10;        RT = slider.getRT()&amp;#10;&amp;#10;train_rt_list.append(RT)&amp;#10;&amp;#10;### save message (Corr, Timeout, Incor&amp;#10;thisExp.addData('trial.outcome', msg)" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;if (evntlg) {&amp;#10;    sr.write(&quot;00&quot;.encode());&amp;#10;}&amp;#10;this_key = &quot;emp&quot;;&amp;#10;if ((key_resp_train.keys.length &gt; 0)) {&amp;#10;    this_key = Number.parseInt(key_resp_train.keys[0]);&amp;#10;}&amp;#10;this_resp = [slider_training.getRating(), this_key];&amp;#10;if (_pj.in_es6(ans, this_resp)) {&amp;#10;    msg = &quot;Correct!&quot;;&amp;#10;} else {&amp;#10;    if ((! _pj.in_es6(ans, this_resp))) {&amp;#10;        msg = &quot;Incorrect!&quot;;&amp;#10;    }&amp;#10;}&amp;#10;if ((slider.getRT() === null)) {&amp;#10;    RT = key_resp_train.rt;&amp;#10;} else {&amp;#10;    RT = slider_training.getRT();&amp;#10;}&amp;#10;console.log(RT);&amp;#10;train_rt_list.push(RT);&amp;#10;console.log(train_rt_list);&amp;#10;psychoJS.experiment.addData(&quot;trial.outcome&quot;, msg);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="# Set serial to 0 if running&amp;#10;if evntlg:  sr.write(&quot;00&quot;.encode())&amp;#10;# Set variables and adjust pointer&amp;#10;this_key = &quot;emp&quot;&amp;#10;if len(key_resp_train.keys) &gt; 0:&amp;#10;    this_key = int(key_resp_train.keys[0])&amp;#10;this_resp =[slider_training.getRating(), this_key]&amp;#10;&amp;#10;if  ans in this_resp:&amp;#10;    msg = &quot;Correct!&quot;  # For correct trials add one to&amp;#10;        &amp;#10;elif ans not in this_resp: # For incorrect answers&amp;#10;    msg = &quot;Incorrect!&quot;&amp;#10;  &amp;#10;if slider.getRT() is None:&amp;#10;    RT = key_resp_train.rt&amp;#10;else:&amp;#10;        RT = slider_training.getRT()&amp;#10;print(RT)&amp;#10;train_rt_list.append(RT)&amp;#10;print(train_rt_list)&amp;#10;### save message (Corr, Timeout, Incor&amp;#10;thisExp.addData('trial.outcome', msg)" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="training_code" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -1295,8 +1295,8 @@
     <Routine name="instructions"/>
     <LoopInitiator loopType="TrialHandler" name="prac_trials">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="None" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="" valType="file"/>
+      <Param name="conditions" updates="None" val="[{'prac_diff': 'easy1'}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="practice_difficulty.xlsx" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
@@ -1311,8 +1311,8 @@
     <Routine name="new_ui"/>
     <LoopInitiator loopType="TrialHandler" name="prac_trial2">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="None" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="" valType="file"/>
+      <Param name="conditions" updates="None" val="[{'prac_diff': 'easy1'}, {'prac_diff': 'easy1'}, {'prac_diff': 'easy1'}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="practice_difficulty.xlsx" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
@@ -1327,7 +1327,7 @@
     <Routine name="training_instructions"/>
     <LoopInitiator loopType="TrialHandler" name="training_trials">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('train_diff', 'easy1')]), OrderedDict([('train_diff', 'easy2')]), OrderedDict([('train_diff', 'med1')]), OrderedDict([('train_diff', 'med2')]), OrderedDict([('train_diff', 'hard')])]" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('train_diff', 'easy1'), ('train_time', np.int64(5))]), OrderedDict([('train_diff', 'easy2'), ('train_time', np.int64(5))]), OrderedDict([('train_diff', 'med1'), ('train_time', np.int64(5))]), OrderedDict([('train_diff', 'med2'), ('train_time', np.int64(5))]), OrderedDict([('train_diff', 'hard'), ('train_time', np.int64(5))])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="training.csv" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
@@ -1352,20 +1352,32 @@
     <Routine name="feedback"/>
     <LoopTerminator name="trials_2"/>
     <LoopTerminator name="training_trials"/>
-    <LoopInitiator loopType="TrialHandler" name="trials">
+    <LoopInitiator loopType="TrialHandler" name="experimental_trials">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'exp_diff': 'easy1', 'exp_time': 5}, {'exp_diff': 'easy2', 'exp_time': 5}, {'exp_diff': 'medium1', 'exp_time': 5}, {'exp_diff': 'medium2', 'exp_time': 5}, {'exp_diff': 'hard', 'exp_time': 5}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="experiment_difficulty.xlsx" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="experimental_trials" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <LoopInitiator loopType="TrialHandler" name="trials_3">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
       <Param name="conditionsFile" updates="None" val="" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="50" valType="num"/>
-      <Param name="name" updates="None" val="trials" valType="code"/>
+      <Param name="nReps" updates="None" val="5" valType="num"/>
+      <Param name="name" updates="None" val="trials_3" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
     <Routine name="fixation"/>
     <Routine name="sum_routine1"/>
     <Routine name="feedback"/>
-    <LoopTerminator name="trials"/>
+    <LoopTerminator name="trials_3"/>
+    <LoopTerminator name="experimental_trials"/>
   </Flow>
 </PsychoPy2experiment>
