@@ -89,16 +89,3 @@ class MistSums(object):
                 self.ans = str(self.ans).replace('.0', '')
                 last_ans = self.ans
                 break
-
-
-
-usrAvg = 0
-msg = ""
-eq = ""
-corCount = 0
-inCorCount = 0
-meanRT = []
-time = 10
-totalCor = 0
-difficulty = "easy1"
-timeCoef = 1
