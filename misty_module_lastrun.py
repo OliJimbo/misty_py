@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2025.2.3),
-    on Mon 02 Feb 2026 10:24:26 AM GMT
+    on Mon 02 Feb 2026 10:50:43 AM GMT
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -374,107 +374,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Start Code - component code to be run after the window creation
     
-    # --- Initialize components for Routine "practice_trials_2" ---
-    prog_3 = visual.Progress(
-        win, name='prog_3',
-        progress=0.0,
-        pos=(-0.5, 0.5), size=(1, 0.1), anchor='top-left', units='norm',
-        barColor=(1.0000, -1.0000, -1.0000), backColor=(-1.0000, 0.5373, -1.0000), borderColor='white', colorSpace='rgb',
-        lineWidth=4.0, opacity=1.0, ori=0.0,
-        depth=-1
-    )
-    redbar_3 = visual.Rect(
-        win=win, name='redbar_3',units='norm', 
-        width=(2,0.1)[0], height=(2,0.1)[1],
-        ori=0.0, pos=(-1, 0.7), draggable=False, anchor='center-left',
-        lineWidth=1.0,
-        colorSpace='rgb', lineColor='white', fillColor=(1.0000, -1.0000, -1.0000),
-        opacity=None, depth=-2.0, interpolate=True)
-    yellowbar_3 = visual.Rect(
-        win=win, name='yellowbar_3',units='norm', 
-        width=(1, 0.1)[0], height=(1, 0.1)[1],
-        ori=0.0, pos=(0, 0.7), draggable=False, anchor='center-left',
-        lineWidth=1.0,
-        colorSpace='rgb', lineColor='white', fillColor=(1.0000, 1.0000, -1.0000),
-        opacity=None, depth=-3.0, interpolate=True)
-    greenbar_3 = visual.Rect(
-        win=win, name='greenbar_3',units='norm', 
-        width=(0.3, 0.1)[0], height=(0.3, 0.1)[1],
-        ori=0.0, pos=(0.7, 0.7), draggable=False, anchor='center-left',
-        lineWidth=1.0,
-        colorSpace='rgb', lineColor='white', fillColor=(-1.0000, 0.0039, -1.0000),
-        opacity=None, depth=-4.0, interpolate=True)
-    arrow_3 = visual.ShapeStim(
-        win=win, name='arrow_3', vertices='arrow',units='norm', 
-        size=(0.05, 0.05),
-        ori=0.0, pos=[0,0], draggable=False, anchor='center',
-        lineWidth=1.0,
-        colorSpace='rgb', lineColor='white', fillColor='white',
-        opacity=None, depth=-5.0, interpolate=True)
-    arrow_4 = visual.ShapeStim(
-        win=win, name='arrow_4', vertices='arrow',units='norm', 
-        size=(0.05, 0.05),
-        ori=0.0, pos=[0,0], draggable=False, anchor='center',
-        lineWidth=1.0,
-        colorSpace='rgb', lineColor='white', fillColor='white',
-        opacity=None, depth=-6.0, interpolate=True)
-    targlab = visual.TextBox2(
-         win, text='Target', placeholder='Type here...', font='Arial',
-         ori=0.0, pos=(0.7, 0.55), draggable=False, units='norm',     letterHeight=0.05,
-         size=(0.5, 0.5), borderWidth=2.0,
-         color='white', colorSpace='rgb',
-         opacity=None,
-         bold=False, italic=False,
-         lineSpacing=1.0, speechPoint=None,
-         padding=0.0, alignment='center',
-         anchor='center', overflow='visible',
-         fillColor=None, borderColor=None,
-         flipHoriz=False, flipVert=False, languageStyle='LTR',
-         editable=False,
-         name='targlab',
-         depth=-7, autoLog=True,
-    )
-    yourperf = visual.TextBox2(
-         win, text='You', placeholder='Type here...', font='Arial',
-         ori=0.0, pos=[0,0], draggable=False, units='norm',     letterHeight=0.05,
-         size=(0.5, 0.5), borderWidth=2.0,
-         color='white', colorSpace='rgb',
-         opacity=None,
-         bold=False, italic=False,
-         lineSpacing=1.0, speechPoint=None,
-         padding=0.0, alignment='center',
-         anchor='center', overflow='visible',
-         fillColor=None, borderColor=None,
-         flipHoriz=False, flipVert=False, languageStyle='LTR',
-         editable=False,
-         name='yourperf',
-         depth=-8, autoLog=True,
-    )
-    slider_4 = visual.Slider(win=win, name='slider_4',
-        startValue=None, size=(1.0, 0.1), pos=(0, -0.4), units='norm',
-        labels=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9), ticks=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9), granularity=0.0,
-        style='choice', styleTweaks=[], opacity=None,
-        labelColor=(-1.0000, 0.0039, 0.0039), markerColor=(1.0000, -0.4588, -1.0000), lineColor='White', colorSpace='rgb',
-        font='Noto Sans', labelHeight=0.05,
-        flip=False, ori=0.0, depth=-9, readOnly=False)
-    key_resp_5 = keyboard.Keyboard(deviceName='defaultKeyboard')
-    textbox_5 = visual.TextBox2(
-         win, text='', placeholder='Type here...', font='Arial',
-         ori=0.0, pos=(0, 0), draggable=False,      letterHeight=0.05,
-         size=(0.5, 0.5), borderWidth=2.0,
-         color='white', colorSpace='rgb',
-         opacity=None,
-         bold=False, italic=False,
-         lineSpacing=1.0, speechPoint=None,
-         padding=0.0, alignment='center',
-         anchor='center', overflow='visible',
-         fillColor=None, borderColor=None,
-         flipHoriz=False, flipVert=False, languageStyle='LTR',
-         editable=False,
-         name='textbox_5',
-         depth=-11, autoLog=True,
-    )
-    
     # --- Initialize components for Routine "wait_screen" ---
     # Run 'Begin Experiment' code from setup_exp
     import serial
@@ -839,13 +738,52 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         lineWidth=1.0,
         colorSpace='rgb', lineColor='white', fillColor=(-1.0000, 0.0039, -1.0000),
         opacity=None, depth=-4.0, interpolate=True)
+    targarrow = visual.ShapeStim(
+        win=win, name='targarrow', vertices='arrow',units='norm', 
+        size=(0.05, 0.05),
+        ori=0.0, pos=(0.7,0.6), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor='white', fillColor='white',
+        opacity=None, depth=-5.0, interpolate=True)
     arrow = visual.ShapeStim(
         win=win, name='arrow', vertices='arrow',units='norm', 
         size=(0.05, 0.05),
         ori=0.0, pos=[0,0], draggable=False, anchor='center',
         lineWidth=1.0,
         colorSpace='rgb', lineColor='white', fillColor='white',
-        opacity=None, depth=-5.0, interpolate=True)
+        opacity=None, depth=-6.0, interpolate=True)
+    yourperfexp = visual.TextBox2(
+         win, text='You', placeholder='Type here...', font='Arial',
+         ori=0.0, pos=[0,0], draggable=False, units='norm',     letterHeight=0.05,
+         size=(0.5, 0.5), borderWidth=2.0,
+         color='white', colorSpace='rgb',
+         opacity=None,
+         bold=False, italic=False,
+         lineSpacing=1.0, speechPoint=None,
+         padding=0.0, alignment='center',
+         anchor='center', overflow='visible',
+         fillColor=None, borderColor=None,
+         flipHoriz=False, flipVert=False, languageStyle='LTR',
+         editable=False,
+         name='yourperfexp',
+         depth=-7, autoLog=True,
+    )
+    tarlabexp = visual.TextBox2(
+         win, text='Target', placeholder='Type here...', font='Arial',
+         ori=0.0, pos=(0.7, 0.55), draggable=False, units='norm',     letterHeight=0.05,
+         size=(0.5, 0.5), borderWidth=2.0,
+         color='white', colorSpace='rgb',
+         opacity=None,
+         bold=False, italic=False,
+         lineSpacing=1.0, speechPoint=None,
+         padding=0.0, alignment='center',
+         anchor='center', overflow='visible',
+         fillColor=None, borderColor=None,
+         flipHoriz=False, flipVert=False, languageStyle='LTR',
+         editable=False,
+         name='tarlabexp',
+         depth=-8, autoLog=True,
+    )
     textbox = visual.TextBox2(
          win, text='', placeholder='Type here...', font='Arial',
          ori=0.0, pos=(0, 0), draggable=False,      letterHeight=0.05,
@@ -860,7 +798,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
          flipHoriz=False, flipVert=False, languageStyle='LTR',
          editable=False,
          name='textbox',
-         depth=-6, autoLog=True,
+         depth=-9, autoLog=True,
     )
     slider = visual.Slider(win=win, name='slider',
         startValue=None, size=(1.0, 0.1), pos=(0, -0.4), units='norm',
@@ -868,7 +806,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         style='choice', styleTweaks=[], opacity=None,
         labelColor=(-1.0000, 0.0039, 0.0039), markerColor=(1.0000, -0.4588, -1.0000), lineColor='White', colorSpace='rgb',
         font='Noto Sans', labelHeight=0.05,
-        flip=False, ori=0.0, depth=-7, readOnly=False)
+        flip=False, ori=0.0, depth=-10, readOnly=False)
     key_resp = keyboard.Keyboard(deviceName='defaultKeyboard')
     norm_arrow = visual.ShapeStim(
         win=win, name='norm_arrow', vertices='arrow',
@@ -876,7 +814,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         ori=0.0, pos=(0.7, 0.6), draggable=False, anchor='center',
         lineWidth=1.0,
         colorSpace='rgb', lineColor='white', fillColor='white',
-        opacity=None, depth=-9.0, interpolate=True)
+        opacity=None, depth=-12.0, interpolate=True)
     
     # --- Initialize components for Routine "feedback" ---
     feedback_practice_1 = visual.TextBox2(
@@ -944,535 +882,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     expInfo['expStart'] = data.getDateStr(
         format='%Y-%m-%d %Hh%M.%S.%f %z', fractionalSecondDigits=6
     )
-    
-    # --- Prepare to start Routine "practice_trials_2" ---
-    # create an object to store info about Routine practice_trials_2
-    practice_trials_2 = data.Routine(
-        name='practice_trials_2',
-        components=[prog_3, redbar_3, yellowbar_3, greenbar_3, arrow_3, arrow_4, targlab, yourperf, slider_4, key_resp_5, textbox_5],
-    )
-    practice_trials_2.status = NOT_STARTED
-    continueRoutine = True
-    # update component parameters for each repeat
-    # Run 'Begin Routine' code from practice_code_2
-    msg = ""
-    time=20
-    timer = core.CountdownTimer(time)
-    
-    #Set sum for this repetition
-    eq_gen.make_equation("easy1")
-    eq = "%s = ?" %(eq_gen.equation)
-    ans = int(eq_gen.ans)
-    timeout = False
-    
-    # If serial object is loaded then use it
-    if evntlg :    sr.write(difbyt)
-    arrow_3.setPos((1-pointer_pos, 0.6))
-    arrow_4.setPos((0.7,0.6))
-    targlab.reset()
-    yourperf.reset()
-    yourperf.setPos((1-pointer_pos, 0.55))
-    slider_4.reset()
-    # create starting attributes for key_resp_5
-    key_resp_5.keys = []
-    key_resp_5.rt = []
-    _key_resp_5_allKeys = []
-    textbox_5.reset()
-    textbox_5.setText(eq)
-    # store start times for practice_trials_2
-    practice_trials_2.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
-    practice_trials_2.tStart = globalClock.getTime(format='float')
-    practice_trials_2.status = STARTED
-    thisExp.addData('practice_trials_2.started', practice_trials_2.tStart)
-    practice_trials_2.maxDuration = None
-    # keep track of which components have finished
-    practice_trials_2Components = practice_trials_2.components
-    for thisComponent in practice_trials_2.components:
-        thisComponent.tStart = None
-        thisComponent.tStop = None
-        thisComponent.tStartRefresh = None
-        thisComponent.tStopRefresh = None
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    # reset timers
-    t = 0
-    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-    frameN = -1
-    
-    # --- Run Routine "practice_trials_2" ---
-    thisExp.currentRoutine = practice_trials_2
-    practice_trials_2.forceEnded = routineForceEnded = not continueRoutine
-    while continueRoutine:
-        # get current time
-        t = routineTimer.getTime()
-        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
-        # Run 'Each Frame' code from practice_code_2
-        if timer.getTime() <= 0:
-            timeout = True
-            continueRoutine = False
-            
-        
-        # *prog_3* updates
-        
-        # if prog_3 is starting this frame...
-        if prog_3.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
-            # keep track of start time/frame for later
-            prog_3.frameNStart = frameN  # exact frame index
-            prog_3.tStart = t  # local t and not account for scr refresh
-            prog_3.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(prog_3, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'prog_3.started')
-            # update status
-            prog_3.status = STARTED
-            prog_3.setAutoDraw(True)
-        
-        # if prog_3 is active this frame...
-        if prog_3.status == STARTED:
-            # update params
-            prog_3.setProgress(0 + (timer.getTime()/time), log=False)
-        
-        # if prog_3 is stopping this frame...
-        if prog_3.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > prog_3.tStartRefresh + time-frameTolerance:
-                # keep track of stop time/frame for later
-                prog_3.tStop = t  # not accounting for scr refresh
-                prog_3.tStopRefresh = tThisFlipGlobal  # on global time
-                prog_3.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'prog_3.stopped')
-                # update status
-                prog_3.status = FINISHED
-                prog_3.setAutoDraw(False)
-        
-        # *redbar_3* updates
-        
-        # if redbar_3 is starting this frame...
-        if redbar_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            redbar_3.frameNStart = frameN  # exact frame index
-            redbar_3.tStart = t  # local t and not account for scr refresh
-            redbar_3.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(redbar_3, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'redbar_3.started')
-            # update status
-            redbar_3.status = STARTED
-            redbar_3.setAutoDraw(True)
-        
-        # if redbar_3 is active this frame...
-        if redbar_3.status == STARTED:
-            # update params
-            pass
-        
-        # if redbar_3 is stopping this frame...
-        if redbar_3.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > redbar_3.tStartRefresh + time-frameTolerance:
-                # keep track of stop time/frame for later
-                redbar_3.tStop = t  # not accounting for scr refresh
-                redbar_3.tStopRefresh = tThisFlipGlobal  # on global time
-                redbar_3.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'redbar_3.stopped')
-                # update status
-                redbar_3.status = FINISHED
-                redbar_3.setAutoDraw(False)
-        
-        # *yellowbar_3* updates
-        
-        # if yellowbar_3 is starting this frame...
-        if yellowbar_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            yellowbar_3.frameNStart = frameN  # exact frame index
-            yellowbar_3.tStart = t  # local t and not account for scr refresh
-            yellowbar_3.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(yellowbar_3, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'yellowbar_3.started')
-            # update status
-            yellowbar_3.status = STARTED
-            yellowbar_3.setAutoDraw(True)
-        
-        # if yellowbar_3 is active this frame...
-        if yellowbar_3.status == STARTED:
-            # update params
-            pass
-        
-        # if yellowbar_3 is stopping this frame...
-        if yellowbar_3.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > yellowbar_3.tStartRefresh + time-frameTolerance:
-                # keep track of stop time/frame for later
-                yellowbar_3.tStop = t  # not accounting for scr refresh
-                yellowbar_3.tStopRefresh = tThisFlipGlobal  # on global time
-                yellowbar_3.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'yellowbar_3.stopped')
-                # update status
-                yellowbar_3.status = FINISHED
-                yellowbar_3.setAutoDraw(False)
-        
-        # *greenbar_3* updates
-        
-        # if greenbar_3 is starting this frame...
-        if greenbar_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            greenbar_3.frameNStart = frameN  # exact frame index
-            greenbar_3.tStart = t  # local t and not account for scr refresh
-            greenbar_3.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(greenbar_3, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'greenbar_3.started')
-            # update status
-            greenbar_3.status = STARTED
-            greenbar_3.setAutoDraw(True)
-        
-        # if greenbar_3 is active this frame...
-        if greenbar_3.status == STARTED:
-            # update params
-            pass
-        
-        # if greenbar_3 is stopping this frame...
-        if greenbar_3.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > greenbar_3.tStartRefresh + time-frameTolerance:
-                # keep track of stop time/frame for later
-                greenbar_3.tStop = t  # not accounting for scr refresh
-                greenbar_3.tStopRefresh = tThisFlipGlobal  # on global time
-                greenbar_3.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'greenbar_3.stopped')
-                # update status
-                greenbar_3.status = FINISHED
-                greenbar_3.setAutoDraw(False)
-        
-        # *arrow_3* updates
-        
-        # if arrow_3 is starting this frame...
-        if arrow_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            arrow_3.frameNStart = frameN  # exact frame index
-            arrow_3.tStart = t  # local t and not account for scr refresh
-            arrow_3.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(arrow_3, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'arrow_3.started')
-            # update status
-            arrow_3.status = STARTED
-            arrow_3.setAutoDraw(True)
-        
-        # if arrow_3 is active this frame...
-        if arrow_3.status == STARTED:
-            # update params
-            pass
-        
-        # if arrow_3 is stopping this frame...
-        if arrow_3.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > arrow_3.tStartRefresh + time-frameTolerance:
-                # keep track of stop time/frame for later
-                arrow_3.tStop = t  # not accounting for scr refresh
-                arrow_3.tStopRefresh = tThisFlipGlobal  # on global time
-                arrow_3.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'arrow_3.stopped')
-                # update status
-                arrow_3.status = FINISHED
-                arrow_3.setAutoDraw(False)
-        
-        # *arrow_4* updates
-        
-        # if arrow_4 is starting this frame...
-        if arrow_4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            arrow_4.frameNStart = frameN  # exact frame index
-            arrow_4.tStart = t  # local t and not account for scr refresh
-            arrow_4.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(arrow_4, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'arrow_4.started')
-            # update status
-            arrow_4.status = STARTED
-            arrow_4.setAutoDraw(True)
-        
-        # if arrow_4 is active this frame...
-        if arrow_4.status == STARTED:
-            # update params
-            pass
-        
-        # if arrow_4 is stopping this frame...
-        if arrow_4.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > arrow_4.tStartRefresh + time-frameTolerance:
-                # keep track of stop time/frame for later
-                arrow_4.tStop = t  # not accounting for scr refresh
-                arrow_4.tStopRefresh = tThisFlipGlobal  # on global time
-                arrow_4.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'arrow_4.stopped')
-                # update status
-                arrow_4.status = FINISHED
-                arrow_4.setAutoDraw(False)
-        
-        # *targlab* updates
-        
-        # if targlab is starting this frame...
-        if targlab.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            targlab.frameNStart = frameN  # exact frame index
-            targlab.tStart = t  # local t and not account for scr refresh
-            targlab.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(targlab, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'targlab.started')
-            # update status
-            targlab.status = STARTED
-            targlab.setAutoDraw(True)
-        
-        # if targlab is active this frame...
-        if targlab.status == STARTED:
-            # update params
-            pass
-        
-        # if targlab is stopping this frame...
-        if targlab.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > targlab.tStartRefresh + time-frameTolerance:
-                # keep track of stop time/frame for later
-                targlab.tStop = t  # not accounting for scr refresh
-                targlab.tStopRefresh = tThisFlipGlobal  # on global time
-                targlab.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'targlab.stopped')
-                # update status
-                targlab.status = FINISHED
-                targlab.setAutoDraw(False)
-        
-        # *yourperf* updates
-        
-        # if yourperf is starting this frame...
-        if yourperf.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            yourperf.frameNStart = frameN  # exact frame index
-            yourperf.tStart = t  # local t and not account for scr refresh
-            yourperf.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(yourperf, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'yourperf.started')
-            # update status
-            yourperf.status = STARTED
-            yourperf.setAutoDraw(True)
-        
-        # if yourperf is active this frame...
-        if yourperf.status == STARTED:
-            # update params
-            pass
-        
-        # if yourperf is stopping this frame...
-        if yourperf.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > yourperf.tStartRefresh + time-frameTolerance:
-                # keep track of stop time/frame for later
-                yourperf.tStop = t  # not accounting for scr refresh
-                yourperf.tStopRefresh = tThisFlipGlobal  # on global time
-                yourperf.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'yourperf.stopped')
-                # update status
-                yourperf.status = FINISHED
-                yourperf.setAutoDraw(False)
-        
-        # *slider_4* updates
-        
-        # if slider_4 is starting this frame...
-        if slider_4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            slider_4.frameNStart = frameN  # exact frame index
-            slider_4.tStart = t  # local t and not account for scr refresh
-            slider_4.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(slider_4, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'slider_4.started')
-            # update status
-            slider_4.status = STARTED
-            slider_4.setAutoDraw(True)
-        
-        # if slider_4 is active this frame...
-        if slider_4.status == STARTED:
-            # update params
-            pass
-        
-        # if slider_4 is stopping this frame...
-        if slider_4.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > slider_4.tStartRefresh + time-frameTolerance:
-                # keep track of stop time/frame for later
-                slider_4.tStop = t  # not accounting for scr refresh
-                slider_4.tStopRefresh = tThisFlipGlobal  # on global time
-                slider_4.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'slider_4.stopped')
-                # update status
-                slider_4.status = FINISHED
-                slider_4.setAutoDraw(False)
-        
-        # Check slider_4 for response to end Routine
-        if slider_4.getRating() is not None and slider_4.status == STARTED:
-            continueRoutine = False
-        
-        # *key_resp_5* updates
-        waitOnFlip = False
-        
-        # if key_resp_5 is starting this frame...
-        if key_resp_5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            key_resp_5.frameNStart = frameN  # exact frame index
-            key_resp_5.tStart = t  # local t and not account for scr refresh
-            key_resp_5.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(key_resp_5, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'key_resp_5.started')
-            # update status
-            key_resp_5.status = STARTED
-            # keyboard checking is just starting
-            waitOnFlip = True
-            win.callOnFlip(key_resp_5.clock.reset)  # t=0 on next screen flip
-            win.callOnFlip(key_resp_5.clearEvents, eventType='keyboard')  # clear events on next screen flip
-        
-        # if key_resp_5 is stopping this frame...
-        if key_resp_5.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > key_resp_5.tStartRefresh + time-frameTolerance:
-                # keep track of stop time/frame for later
-                key_resp_5.tStop = t  # not accounting for scr refresh
-                key_resp_5.tStopRefresh = tThisFlipGlobal  # on global time
-                key_resp_5.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'key_resp_5.stopped')
-                # update status
-                key_resp_5.status = FINISHED
-                key_resp_5.status = FINISHED
-        if key_resp_5.status == STARTED and not waitOnFlip:
-            theseKeys = key_resp_5.getKeys(keyList=["1","2","3","4","5","6","7","8","9","0"], ignoreKeys=["escape"], waitRelease=False)
-            _key_resp_5_allKeys.extend(theseKeys)
-            if len(_key_resp_5_allKeys):
-                key_resp_5.keys = _key_resp_5_allKeys[-1].name  # just the last key pressed
-                key_resp_5.rt = _key_resp_5_allKeys[-1].rt
-                key_resp_5.duration = _key_resp_5_allKeys[-1].duration
-                # a response ends the routine
-                continueRoutine = False
-        
-        # *textbox_5* updates
-        
-        # if textbox_5 is starting this frame...
-        if textbox_5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            textbox_5.frameNStart = frameN  # exact frame index
-            textbox_5.tStart = t  # local t and not account for scr refresh
-            textbox_5.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(textbox_5, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'textbox_5.started')
-            # update status
-            textbox_5.status = STARTED
-            textbox_5.setAutoDraw(True)
-        
-        # if textbox_5 is active this frame...
-        if textbox_5.status == STARTED:
-            # update params
-            pass
-        
-        # if textbox_5 is stopping this frame...
-        if textbox_5.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > textbox_5.tStartRefresh + time-frameTolerance:
-                # keep track of stop time/frame for later
-                textbox_5.tStop = t  # not accounting for scr refresh
-                textbox_5.tStopRefresh = tThisFlipGlobal  # on global time
-                textbox_5.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'textbox_5.stopped')
-                # update status
-                textbox_5.status = FINISHED
-                textbox_5.setAutoDraw(False)
-        
-        # check for quit (typically the Esc key)
-        if defaultKeyboard.getKeys(keyList=["escape"]):
-            thisExp.status = FINISHED
-        if thisExp.status == FINISHED or endExpNow:
-            endExperiment(thisExp, win=win)
-            return
-        # pause experiment here if requested
-        if thisExp.status == PAUSED:
-            pauseExperiment(
-                thisExp=thisExp, 
-                win=win, 
-                timers=[routineTimer, globalClock], 
-                currentRoutine=practice_trials_2,
-            )
-            # skip the frame we paused on
-            continue
-        
-        # has a Component requested the Routine to end?
-        if not continueRoutine:
-            practice_trials_2.forceEnded = routineForceEnded = True
-        # has the Routine been forcibly ended?
-        if practice_trials_2.forceEnded or routineForceEnded:
-            break
-        # has every Component finished?
-        continueRoutine = False
-        for thisComponent in practice_trials_2.components:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
-        
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
-    
-    # --- Ending Routine "practice_trials_2" ---
-    for thisComponent in practice_trials_2.components:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    # store stop times for practice_trials_2
-    practice_trials_2.tStop = globalClock.getTime(format='float')
-    practice_trials_2.tStopRefresh = tThisFlipGlobal
-    thisExp.addData('practice_trials_2.stopped', practice_trials_2.tStop)
-    # Run 'End Routine' code from practice_code_2
-    # Set serial to 0 if running
-    if evntlg:  sr.write("00".encode())
-    
-    # Set variables and adjust pointer
-    this_key = "emp"
-    if len(key_resp_5.keys) > 0:
-        this_key = int(key_resp_5.keys[0])
-    this_resp =[slider_4.getRating(), this_key]
-    
-    if  ans in this_resp:
-        msg = "Correct!"  # For correct trials add one to
-            
-    elif (timeout is True):
-        msg = "Time-Out!"
-    
-    elif ans not in this_resp: # For incorrect answers
-        msg = "Incorrect!"
-    thisExp.addData('slider_4.response', slider_4.getRating())
-    thisExp.addData('slider_4.rt', slider_4.getRT())
-    # check responses
-    if key_resp_5.keys in ['', [], None]:  # No response was made
-        key_resp_5.keys = None
-    thisExp.addData('key_resp_5.keys',key_resp_5.keys)
-    if key_resp_5.keys != None:  # we had a response
-        thisExp.addData('key_resp_5.rt', key_resp_5.rt)
-        thisExp.addData('key_resp_5.duration', key_resp_5.duration)
-    thisExp.nextEntry()
-    # the Routine "practice_trials_2" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
     
     # --- Prepare to start Routine "wait_screen" ---
     # create an object to store info about Routine wait_screen
@@ -1775,7 +1184,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     prac_trials = data.TrialHandler2(
         name='prac_trials',
-        nReps=0.0, 
+        nReps=1.0, 
         method='random', 
         extraInfo=expInfo, 
         originPath=-1, 
@@ -2106,7 +1515,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     key_resp_4.status = FINISHED
                     key_resp_4.status = FINISHED
             if key_resp_4.status == STARTED and not waitOnFlip:
-                theseKeys = key_resp_4.getKeys(keyList=["1","2","3","4","5","6","7","8","9","0"], ignoreKeys=["escape"], waitRelease=False)
+                theseKeys = key_resp_4.getKeys(keyList=["1","2","3","4","5","6","7","8","9","0","s"], ignoreKeys=["escape"], waitRelease=False)
                 _key_resp_4_allKeys.extend(theseKeys)
                 if len(_key_resp_4_allKeys):
                     key_resp_4.keys = _key_resp_4_allKeys[-1].name  # just the last key pressed
@@ -2163,7 +1572,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # Set variables and adjust pointer
         this_key = "emp"
         if len(key_resp_4.keys) > 0:
-            this_key = int(key_resp_4.keys[0])
+            if  "s" in this_resp:
+                prac_trials.finished=True
+                continueRoutine=False
+            else:
+                this_key = int(key_resp_4.keys[0])
         this_resp =[slider_3.getRating(), this_key]
         
         if  ans in this_resp:
@@ -2329,7 +1742,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             prac_trials.status = STARTED
         thisExp.nextEntry()
         
-    # completed 0.0 repeats of 'prac_trials'
+    # completed 1.0 repeats of 'prac_trials'
     prac_trials.status = FINISHED
     
     if thisSession is not None:
@@ -2464,7 +1877,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     prac_trial2 = data.TrialHandler2(
         name='prac_trial2',
-        nReps=0.0, 
+        nReps=1.0, 
         method='random', 
         extraInfo=expInfo, 
         originPath=-1, 
@@ -3044,7 +2457,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     key_resp_5.status = FINISHED
                     key_resp_5.status = FINISHED
             if key_resp_5.status == STARTED and not waitOnFlip:
-                theseKeys = key_resp_5.getKeys(keyList=["1","2","3","4","5","6","7","8","9","0"], ignoreKeys=["escape"], waitRelease=False)
+                theseKeys = key_resp_5.getKeys(keyList=["1","2","3","4","5","6","7","8","9","0","s"], ignoreKeys=["escape"], waitRelease=False)
                 _key_resp_5_allKeys.extend(theseKeys)
                 if len(_key_resp_5_allKeys):
                     key_resp_5.keys = _key_resp_5_allKeys[-1].name  # just the last key pressed
@@ -3141,6 +2554,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         if  ans in this_resp:
             msg = "Correct!"  # For correct trials add one to
+        
+        if  "s" in this_resp:
+            prac_trials2.finished=True
                 
         elif (timeout is True):
             msg = "Time-Out!"
@@ -3302,7 +2718,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             prac_trial2.status = STARTED
         thisExp.nextEntry()
         
-    # completed 0.0 repeats of 'prac_trial2'
+    # completed 1.0 repeats of 'prac_trial2'
     prac_trial2.status = FINISHED
     
     if thisSession is not None:
@@ -3774,7 +3190,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     win.callOnFlip(key_resp_train.clock.reset)  # t=0 on next screen flip
                     win.callOnFlip(key_resp_train.clearEvents, eventType='keyboard')  # clear events on next screen flip
                 if key_resp_train.status == STARTED and not waitOnFlip:
-                    theseKeys = key_resp_train.getKeys(keyList=["1","2","3","4","5","6","7","8","9","0"], ignoreKeys=["escape"], waitRelease=False)
+                    theseKeys = key_resp_train.getKeys(keyList=["1","2","3","4","5","6","7","8","9","0","s"], ignoreKeys=["escape"], waitRelease=False)
                     _key_resp_train_allKeys.extend(theseKeys)
                     if len(_key_resp_train_allKeys):
                         key_resp_train.keys = _key_resp_train_allKeys[-1].name  # just the last key pressed
@@ -3853,6 +3269,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             else:
                 msg="End of block"
                 rtDict[train_diff].append(10)
+            
+            if  "s" in this_resp:
+                trials_2.finished=True
+            
             trials_2.addData('slider_training.response', slider_training.getRating())
             trials_2.addData('slider_training.rt', slider_training.getRT())
             # check responses
@@ -4494,7 +3914,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine sum_routine1
             sum_routine1 = data.Routine(
                 name='sum_routine1',
-                components=[prog, redbar, yellowbar, greenbar, arrow, textbox, slider, key_resp, norm_arrow],
+                components=[prog, redbar, yellowbar, greenbar, targarrow, arrow, yourperfexp, tarlabexp, textbox, slider, key_resp, norm_arrow],
             )
             sum_routine1.status = NOT_STARTED
             continueRoutine = True
@@ -4521,6 +3941,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             ans = int(eq_gen.ans)
             timeout = False
             arrow.setPos((pointer_pos, 0.6))
+            yourperfexp.reset()
+            yourperfexp.setPos((1-pointer_pos, 0.55))
+            tarlabexp.reset()
             textbox.reset()
             textbox.setText(eq)
             slider.reset()
@@ -4707,6 +4130,40 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         greenbar.status = FINISHED
                         greenbar.setAutoDraw(False)
                 
+                # *targarrow* updates
+                
+                # if targarrow is starting this frame...
+                if targarrow.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    targarrow.frameNStart = frameN  # exact frame index
+                    targarrow.tStart = t  # local t and not account for scr refresh
+                    targarrow.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(targarrow, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'targarrow.started')
+                    # update status
+                    targarrow.status = STARTED
+                    targarrow.setAutoDraw(True)
+                
+                # if targarrow is active this frame...
+                if targarrow.status == STARTED:
+                    # update params
+                    pass
+                
+                # if targarrow is stopping this frame...
+                if targarrow.status == STARTED:
+                    # is it time to stop? (based on global clock, using actual start)
+                    if tThisFlipGlobal > targarrow.tStartRefresh + time-frameTolerance:
+                        # keep track of stop time/frame for later
+                        targarrow.tStop = t  # not accounting for scr refresh
+                        targarrow.tStopRefresh = tThisFlipGlobal  # on global time
+                        targarrow.frameNStop = frameN  # exact frame index
+                        # add timestamp to datafile
+                        thisExp.timestampOnFlip(win, 'targarrow.stopped')
+                        # update status
+                        targarrow.status = FINISHED
+                        targarrow.setAutoDraw(False)
+                
                 # *arrow* updates
                 
                 # if arrow is starting this frame...
@@ -4740,6 +4197,74 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         arrow.status = FINISHED
                         arrow.setAutoDraw(False)
+                
+                # *yourperfexp* updates
+                
+                # if yourperfexp is starting this frame...
+                if yourperfexp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    yourperfexp.frameNStart = frameN  # exact frame index
+                    yourperfexp.tStart = t  # local t and not account for scr refresh
+                    yourperfexp.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(yourperfexp, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'yourperfexp.started')
+                    # update status
+                    yourperfexp.status = STARTED
+                    yourperfexp.setAutoDraw(True)
+                
+                # if yourperfexp is active this frame...
+                if yourperfexp.status == STARTED:
+                    # update params
+                    pass
+                
+                # if yourperfexp is stopping this frame...
+                if yourperfexp.status == STARTED:
+                    # is it time to stop? (based on global clock, using actual start)
+                    if tThisFlipGlobal > yourperfexp.tStartRefresh + time-frameTolerance:
+                        # keep track of stop time/frame for later
+                        yourperfexp.tStop = t  # not accounting for scr refresh
+                        yourperfexp.tStopRefresh = tThisFlipGlobal  # on global time
+                        yourperfexp.frameNStop = frameN  # exact frame index
+                        # add timestamp to datafile
+                        thisExp.timestampOnFlip(win, 'yourperfexp.stopped')
+                        # update status
+                        yourperfexp.status = FINISHED
+                        yourperfexp.setAutoDraw(False)
+                
+                # *tarlabexp* updates
+                
+                # if tarlabexp is starting this frame...
+                if tarlabexp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    tarlabexp.frameNStart = frameN  # exact frame index
+                    tarlabexp.tStart = t  # local t and not account for scr refresh
+                    tarlabexp.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(tarlabexp, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'tarlabexp.started')
+                    # update status
+                    tarlabexp.status = STARTED
+                    tarlabexp.setAutoDraw(True)
+                
+                # if tarlabexp is active this frame...
+                if tarlabexp.status == STARTED:
+                    # update params
+                    pass
+                
+                # if tarlabexp is stopping this frame...
+                if tarlabexp.status == STARTED:
+                    # is it time to stop? (based on global clock, using actual start)
+                    if tThisFlipGlobal > tarlabexp.tStartRefresh + time-frameTolerance:
+                        # keep track of stop time/frame for later
+                        tarlabexp.tStop = t  # not accounting for scr refresh
+                        tarlabexp.tStopRefresh = tThisFlipGlobal  # on global time
+                        tarlabexp.frameNStop = frameN  # exact frame index
+                        # add timestamp to datafile
+                        thisExp.timestampOnFlip(win, 'tarlabexp.stopped')
+                        # update status
+                        tarlabexp.status = FINISHED
+                        tarlabexp.setAutoDraw(False)
                 
                 # *textbox* updates
                 
@@ -4846,7 +4371,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         key_resp.status = FINISHED
                         key_resp.status = FINISHED
                 if key_resp.status == STARTED and not waitOnFlip:
-                    theseKeys = key_resp.getKeys(keyList=["1","2","3","4","5","6","7","8","9","0"], ignoreKeys=["escape"], waitRelease=False)
+                    theseKeys = key_resp.getKeys(keyList=["1","2","3","4","5","6","7","8","9","0","s"], ignoreKeys=["escape"], waitRelease=False)
                     _key_resp_allKeys.extend(theseKeys)
                     if len(_key_resp_allKeys):
                         key_resp.keys = _key_resp_allKeys[-1].name  # just the last key pressed
@@ -5003,6 +4528,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             else:
                 msg="End of block"
                 perf= f"You scored {total_cor} out of {trial_counter} on this block \n\n Please press space to continue."
+            if  "s" in this_resp:
+                trials_3.finished=True
+            
             trials_3.addData('slider.response', slider.getRating())
             trials_3.addData('slider.rt', slider.getRT())
             # check responses
