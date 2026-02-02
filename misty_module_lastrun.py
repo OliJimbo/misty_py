@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2025.2.3),
-    on Mon 02 Feb 2026 10:50:43 AM GMT
+    on Mon 02 Feb 2026 07:29:35 PM GMT
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -1572,7 +1572,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # Set variables and adjust pointer
         this_key = "emp"
         if len(key_resp_4.keys) > 0:
-            if  "s" in this_resp:
+            if  "s" in key_resp_4.keys:
                 prac_trials.finished=True
                 continueRoutine=False
             else:
@@ -1582,9 +1582,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if  ans in this_resp:
             msg = "Correct!"  # For correct trials add one to
                 
-        elif (timeout is True):
-            msg = "Time-Out!"
-        
         elif ans not in this_resp: # For incorrect answers
             msg = "Incorrect!"
         prac_trials.addData('slider_3.response', slider_3.getRating())
@@ -2549,8 +2546,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # Set variables and adjust pointer
         this_key = "emp"
         if len(key_resp_5.keys) > 0:
-            this_key = int(key_resp_5.keys[0])
-        this_resp =[slider_4.getRating(), this_key]
+            if  "s" in key_resp_5.keys:
+                prac_trial2.finished=True
+                continueRoutine=False
+            else:
+                this_key = int(key_resp_5.keys[0])
+                this_resp =[slider_4.getRating(), this_key]
         
         if  ans in this_resp:
             msg = "Correct!"  # For correct trials add one to
@@ -3247,8 +3248,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if not endblock:
                 this_key = "emp"
                 if len(key_resp_train.keys) > 0:
-                    this_key = int(key_resp_train.keys[0])
-                this_resp =[slider_training.getRating(), this_key]
+                    if  "s" in key_resp_train.keys:
+                        rtDict[train_diff].append(10)
+                        trials_2.finished=True
+                        continueRoutine=False
+                    else:
+                        this_key = int(key_resp_train.keys[0])
+                        this_resp =[slider_training.getRating(), this_key]
             
                 if  ans in this_resp:
                     msg = "Correct!"  # For correct trials add one to
@@ -3262,16 +3268,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     RT = slider_training.getRT()
                 #Save rt to dictionary
                 rtDict[train_diff].append(RT)
-                rtDict[train_diff].append(10)
             
                 ### save message (Corr, Timeout, Incor
                 thisExp.addData('trial.outcome', msg)
             else:
                 msg="End of block"
-                rtDict[train_diff].append(10)
             
-            if  "s" in this_resp:
-                trials_2.finished=True
             
             trials_2.addData('slider_training.response', slider_training.getRating())
             trials_2.addData('slider_training.rt', slider_training.getRT())
@@ -4471,8 +4473,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
                 this_key = "emp"
                 if len(key_resp.keys) > 0:
-                    this_key = int(key_resp.keys[0])
-                    this_resp =[slider.getRating(), this_key]
+                    if  "s" in key_resp.keys:
+                        trials_3.finished=True
+                        continueRoutine=False
+                    else:         
+                        this_key = int(key_resp.keys[0])
+                        this_resp =[slider.getRating(), this_key]
                 if  ans in this_resp:
                     msg = "Correct!"  # For correct trials add one to
                     streak_count += 1   # correct counter
