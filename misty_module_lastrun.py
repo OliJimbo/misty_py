@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2025.2.4),
-    on Tue  3 Feb 18:28:13 2026
+    on Wed  4 Feb 10:55:56 2026
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -407,7 +407,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     expDict={}
     time = 20  # starting value for trial time
     difficulty = "easy1"  # diffculty of equation
-    time_coef = 1  # amount to reduce trial time by
+    time_coef = .9  # amount to reduce trial time by
     trial_counter = 0  # current trial
     perf=""
     text = visual.TextStim(win=win, name='text',
@@ -2947,7 +2947,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     training_trials = data.TrialHandler2(
         name='training_trials',
         nReps=1.0, 
-        method='random', 
+        method='sequential', 
         extraInfo=expInfo, 
         originPath=-1, 
         trialList=data.importConditions('training.csv'), 
@@ -3880,7 +3880,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # set up handler to look after randomisation of conditions etc
         trials_3 = data.TrialHandler2(
             name='trials_3',
-            nReps=5.0, 
+            nReps=1000.0, 
             method='random', 
             extraInfo=expInfo, 
             originPath=-1, 
@@ -4058,7 +4058,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if evntlg :    sr.write(diffbyt.encode())
             
             msg = ""
-            
+            ## Set first trial conditions
             if trials_3.thisN == 0:
                 #No pointer on first trial
                 pointer_pos=-2
@@ -4066,6 +4066,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 endblock=False
                 blockTimer=core.CountdownTimer(exp_time)
                 rtDict[exp_diff] = list(filter(None, rtDict[exp_diff]))
+                ### Reduce average trial time by 10%
                 time = np.mean(rtDict[exp_diff]) * time_coef
                 trial_counter=0
             
@@ -4615,9 +4616,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     msg = "Correct!"  # For correct trials add one to
                     streak_count += 1   # correct counter
                     total_cor += 1     # and total correct.
-                    pointer_pos -= 0.005  # increase userAverage pointer by 0.05
-                    if pointer_pos >= .3:
-                        pointer_pos = .3
+                    pointer_pos -= 0.001  # increase userAverage pointer by 0.05
+                    if pointer_pos <= .4:
+                        pointer_pos = .4
                     
                 elif ans not in this_resp: # For incorrect answers
                     msg = "Incorrect!"
@@ -4627,7 +4628,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     if streak_count > 0:
                         streak_count = 0    
                     streak_count -= 1  # set streak to 0 and minus 1 (count incorrect)
-                    if pointer_pos <= 1.5:
+                    if pointer_pos >= 1.5:
                         pointer_pos = 1.5
                 
                 if timeout:
@@ -4658,15 +4659,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
                 if trials_3.thisN == 1:
                    if msg == "Correct!":
-                        pointer_pos=0.4
+                        pointer_pos=0.43
                    else:
                         pointer_pos=0.8
             else:
                 msg="End of block"
                 perf= f"You scored {total_cor} out of {trial_counter} on this block \n\n Please press space to continue."
-            if  "s" in this_resp:
-                trials_3.finished=True
-            
             trials_3.addData('slider.response', slider.getRating())
             trials_3.addData('slider.rt', slider.getRT())
             # check responses
@@ -4822,7 +4820,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 trials_3.status = STARTED
             thisExp.nextEntry()
             
-        # completed 5.0 repeats of 'trials_3'
+        # completed 1000.0 repeats of 'trials_3'
         trials_3.status = FINISHED
         
         if thisSession is not None:
