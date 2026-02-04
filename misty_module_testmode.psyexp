@@ -45,7 +45,7 @@
     <Param val="False" valType="bool" updates="None" name="elSimMode"/>
     <Param val="RIGHT_EYE" valType="str" updates="None" name="elTrackEyes"/>
     <Param val="PUPIL_CR_TRACKING" valType="str" updates="None" name="elTrackingMode"/>
-    <Param val="misty_module" valType="str" updates="None" name="expName"/>
+    <Param val="misty_module_testmode" valType="str" updates="None" name="expName"/>
     <Param val="" valType="str" updates="None" name="expVersion"/>
     <Param val="on Sync" valType="str" updates="None" name="exportHTML"/>
     <Param val="None" valType="str" updates="None" name="eyetracker"/>
@@ -184,8 +184,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="&amp;#10;        // add-on: list(s: string): string[]&amp;#10;        function list(s) {&amp;#10;            // if s is a string, we return a list of its characters&amp;#10;            if (typeof s === 'string')&amp;#10;                return s.split('');&amp;#10;            else&amp;#10;                // otherwise we return s:&amp;#10;                return s;&amp;#10;        }&amp;#10;&amp;#10;        if (evntlg) {&amp;#10;    sr.write(diffbyt.encode());&amp;#10;}&amp;#10;msg = &quot;&quot;;&amp;#10;if ((trials_3.thisN === 0)) {&amp;#10;    pointer_pos = (- 2);&amp;#10;    expDict[exp_diff] = [];&amp;#10;    endblock = false;&amp;#10;    blockTimer = new core.CountdownTimer(exp_time);&amp;#10;    rtDict[exp_diff] = list(filter(null, rtDict[exp_diff]));&amp;#10;    time = (np.mean(rtDict[exp_diff]) * time_coef);&amp;#10;    trial_counter = 0;&amp;#10;}&amp;#10;timer = new core.CountdownTimer(time);&amp;#10;eq_gen.make_equation(exp_diff);&amp;#10;eq = `${eq_gen.equation}`;&amp;#10;ans = Number.parseInt(eq_gen.ans);&amp;#10;timeout = false;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# If serial object is loaded then use it&amp;#10;if evntlg :    sr.write(diffbyt.encode())&amp;#10;&amp;#10;msg = &quot;&quot;&amp;#10;## Set first trial conditions&amp;#10;if trials_3.thisN == 0:&amp;#10;    #No pointer on first trial&amp;#10;    pointer_pos=-2&amp;#10;    expDict[exp_diff]=[]&amp;#10;    endblock=False&amp;#10;    blockTimer=core.CountdownTimer(exp_time)&amp;#10;    rtDict[exp_diff] = list(filter(None, rtDict[exp_diff]))&amp;#10;    ### Reduce average trial time by 10%&amp;#10;    time = np.mean(rtDict[exp_diff]) * time_coef&amp;#10;    trial_counter=0&amp;#10;&amp;#10;timer = core.CountdownTimer(time)&amp;#10;eq_gen.make_equation(exp_diff)&amp;#10;eq = &quot;%s = ?&quot; %(eq_gen.equation)&amp;#10;ans = int(eq_gen.ans)&amp;#10;timeout = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="if (evntlg) {&amp;#10;    sr.write(diffbyt.encode());&amp;#10;}&amp;#10;msg = &quot;&quot;;&amp;#10;if ((trials_3.thisN === 0)) {&amp;#10;    pointer_pos = (- 2);&amp;#10;    endblock = false;&amp;#10;    blockTimer = new core.CountdownTimer(exp_time);&amp;#10;    time = 10;&amp;#10;    trial_counter = 0;&amp;#10;}&amp;#10;timer = new core.CountdownTimer(time);&amp;#10;eq_gen.make_equation(exp_diff);&amp;#10;eq = `${eq_gen.equation}`;&amp;#10;ans = Number.parseInt(eq_gen.ans);&amp;#10;timeout = false;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# If serial object is loaded then use it&amp;#10;if evntlg :    sr.write(diffbyt.encode())&amp;#10;&amp;#10;msg = &quot;&quot;&amp;#10;## Set first trial conditions&amp;#10;if trials_3.thisN == 0:&amp;#10;    #No pointer on first trial&amp;#10;    pointer_pos=-2&amp;#10;    #expDict[exp_diff]=[]&amp;#10;    endblock=False&amp;#10;    blockTimer=core.CountdownTimer(exp_time)&amp;#10;    #rtDict[exp_diff] = list(filter(None, rtDict[exp_diff]))&amp;#10;    ### Reduce average trial time by 10%&amp;#10;    #time = np.mean(rtDict[exp_diff]) * time_coef&amp;#10;    time = 10&amp;#10;    trial_counter=0&amp;#10;&amp;#10;timer = core.CountdownTimer(time)&amp;#10;eq_gen.make_equation(exp_diff)&amp;#10;eq = &quot;%s = ?&quot; %(eq_gen.equation)&amp;#10;ans = int(eq_gen.ans)&amp;#10;timeout = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="if timer.getTime() &lt;= 0:&amp;#10;    continueRoutine = False&amp;#10;    timeout = True&amp;#10;if blockTimer.getTime() &lt;=0:&amp;#10;    trials_3.finished=True&amp;#10;    continueRoutine=False&amp;#10;    timeout=False&amp;#10;    endblock=True" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="if ((timer.getTime() &lt;= 0)) {&amp;#10;    continueRoutine = false;&amp;#10;    timeout = true;&amp;#10;}&amp;#10;if ((blockTimer.getTime() &lt;= 0)) {&amp;#10;    trials_3.finished = true;&amp;#10;    continueRoutine = false;&amp;#10;    timeout = false;&amp;#10;    endblock = true;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -1840,6 +1840,17 @@
     </Routine>
   </Routines>
   <Flow>
+    <LoopInitiator loopType="TrialHandler" name="delete_me">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="0" valType="num"/>
+      <Param name="name" updates="None" val="delete_me" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
     <Routine name="wait_screen"/>
     <Routine name="instructions"/>
     <LoopInitiator loopType="TrialHandler" name="prac_trials">
@@ -1903,6 +1914,7 @@
     <Routine name="next_block"/>
     <LoopTerminator name="training_trials"/>
     <Routine name="start_experiment"/>
+    <LoopTerminator name="delete_me"/>
     <LoopInitiator loopType="TrialHandler" name="experimental_trials">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="[{'exp_diff': 'easy1', 'exp_time': 120, 'diffbyt': 3.0}, {'exp_diff': 'easy2', 'exp_time': 120, 'diffbyt': 4.0}, {'exp_diff': 'med1', 'exp_time': 120, 'diffbyt': 5.0}, {'exp_diff': 'med2', 'exp_time': 120, 'diffbyt': 6.0}, {'exp_diff': 'hard', 'exp_time': 120, 'diffbyt': 7.0}]" valType="str"/>
