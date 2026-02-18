@@ -1,6 +1,6 @@
-train_diff,train_time
-easy1,60
-easy2,60
-med1,60
-med2,60
-hard,60
+train_diff,train_time,train_byt
+easy1,60,C0
+easy2,60,20
+med1,60,A0
+med2,60,60
+hard,60,E0

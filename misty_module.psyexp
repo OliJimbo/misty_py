@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2025.2.4">
+<PsychoPy2experiment encoding="utf-8" version="2025.1.1">
   <Settings>
     <Param val="ptb" valType="str" updates="None" name="Audio lib"/>
     <Param val="" valType="str" updates="None" name="Completed URL"/>
@@ -74,7 +74,9 @@
     <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
     <Param val="" valType="str" updates="None" name="tbModel"/>
     <Param val="60" valType="num" updates="None" name="tbSampleRate"/>
+    <Param val="60" valType="str" updates="None" name="tbSamplingRate"/>
     <Param val="" valType="str" updates="None" name="tbSerialNo"/>
+    <Param val="BINOCULAR" valType="str" updates="None" name="tbTrackEyes"/>
     <Param val="pyglet" valType="str" updates="None" name="winBackend"/>
   </Settings>
   <Routines>
@@ -125,6 +127,7 @@
       <KeyboardComponent name="space_to_cont" plugin="None">
         <Param val="'y','n','left','right','space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -161,6 +164,23 @@
         <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="mouse onset" valType="str" updates="constant" name="timeRelativeTo"/>
       </MouseComponent>
+      <CodeComponent name="flush_serial_1" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="flush_serial_1" valType="code" updates="None" name="name"/>
+      </CodeComponent>
     </Routine>
     <Routine name="sum_routine1">
       <RoutineSettingsComponent name="sum_routine1" plugin="None">
@@ -184,15 +204,15 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="&amp;#10;        // add-on: list(s: string): string[]&amp;#10;        function list(s) {&amp;#10;            // if s is a string, we return a list of its characters&amp;#10;            if (typeof s === 'string')&amp;#10;                return s.split('');&amp;#10;            else&amp;#10;                // otherwise we return s:&amp;#10;                return s;&amp;#10;        }&amp;#10;&amp;#10;        if (evntlg) {&amp;#10;    sr.write(diffbyt.encode());&amp;#10;}&amp;#10;msg = &quot;&quot;;&amp;#10;if ((trials_3.thisRepN === 0)) {&amp;#10;    pointer_pos = (- 2);&amp;#10;    expDict[exp_diff] = [];&amp;#10;    endblock = false;&amp;#10;    blockTimer = new core.CountdownTimer(exp_time);&amp;#10;    if ((testmode.nReps === 0)) {&amp;#10;        time = 10;&amp;#10;        tlim = 90;&amp;#10;    } else {&amp;#10;        rtDict[exp_diff] = list(filter(null, rtDict[exp_diff]));&amp;#10;        time = (np.mean(rtDict[exp_diff]) * time_coef);&amp;#10;        tlim = 0;&amp;#10;    }&amp;#10;    trial_counter = 0;&amp;#10;    thisdiffcor = 0;&amp;#10;}&amp;#10;timer = new core.CountdownTimer(time);&amp;#10;eq_gen.make_equation(exp_diff);&amp;#10;eq = `${eq_gen.equation}`;&amp;#10;ans = Number.parseInt(eq_gen.ans);&amp;#10;timeout = false;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# If serial object is loaded then use it&amp;#10;if evntlg :    sr.write(diffbyt.encode())&amp;#10;msg = &quot;&quot;&amp;#10;## Set first trial conditions&amp;#10;if trials_3.thisRepN == 0:&amp;#10;    #No pointer on first trial&amp;#10;    pointer_pos=-2&amp;#10;    expDict[exp_diff]=[]&amp;#10;    endblock=False&amp;#10;    blockTimer=core.CountdownTimer(exp_time)&amp;#10;    if testmode.nReps==0:      &amp;#10;        time = 10&amp;#10;        tlim=90&amp;#10;    else:&amp;#10;        rtDict[exp_diff] = list(filter(None, rtDict[exp_diff]))&amp;#10;        time = np.mean(rtDict[exp_diff]) * time_coef&amp;#10;        tlim=0&amp;#10;        ### Reduce average trial time by 10%&amp;#10;    &amp;#10;    trial_counter=0&amp;#10;    thisdiffcor=0&amp;#10;&amp;#10;timer = core.CountdownTimer(time)&amp;#10;eq_gen.make_equation(exp_diff)&amp;#10;eq = &quot;%s = ?&quot; %(eq_gen.equation)&amp;#10;ans = int(eq_gen.ans)&amp;#10;timeout = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="&amp;#10;        // add-on: list(s: string): string[]&amp;#10;        function list(s) {&amp;#10;            // if s is a string, we return a list of its characters&amp;#10;            if (typeof s === 'string')&amp;#10;                return s.split('');&amp;#10;            else&amp;#10;                // otherwise we return s:&amp;#10;                return s;&amp;#10;        }&amp;#10;&amp;#10;        if (evntlg) {&amp;#10;    sr.write(diffbyt.toString().encode());&amp;#10;    core.wait(0.1);&amp;#10;    sr.write(&quot;RR&quot;.encode());&amp;#10;    sr.write(&quot;00&quot;.encode());&amp;#10;}&amp;#10;msg = &quot;&quot;;&amp;#10;if ((trials_3.thisRepN === 0)) {&amp;#10;    pointer_pos = (- 2);&amp;#10;    expDict[exp_diff] = [];&amp;#10;    endblock = false;&amp;#10;    blockTimer = new core.CountdownTimer(exp_time);&amp;#10;    if ((testmode.nReps === 0)) {&amp;#10;        time = 10;&amp;#10;        tlim = 90;&amp;#10;    } else {&amp;#10;        rtDict[exp_diff] = list(filter(null, rtDict[exp_diff]));&amp;#10;        time = (np.mean(rtDict[exp_diff]) * time_coef);&amp;#10;        tlim = 0;&amp;#10;    }&amp;#10;    trial_counter = 0;&amp;#10;    thisdiffcor = 0;&amp;#10;}&amp;#10;timer = new core.CountdownTimer(time);&amp;#10;eq_gen.make_equation(exp_diff);&amp;#10;eq = `${eq_gen.equation}`;&amp;#10;ans = Number.parseInt(eq_gen.ans);&amp;#10;timeout = false;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# If serial object is loaded then use it&amp;#10;if evntlg :&amp;#10;    sr.write(str(diffbyt).encode())&amp;#10;    core.wait(0.1)&amp;#10;    sr.write(&quot;RR&quot;.encode())&amp;#10;    sr.write(&quot;00&quot;.encode())&amp;#10;&amp;#10;msg = &quot;&quot;&amp;#10;## Set first trial conditions&amp;#10;if trials_3.thisRepN == 0:&amp;#10;    #No pointer on first trial&amp;#10;    pointer_pos=-2&amp;#10;    expDict[exp_diff]=[]&amp;#10;    endblock=False&amp;#10;    blockTimer=core.CountdownTimer(exp_time)&amp;#10;    if testmode.nReps==0:      &amp;#10;        time = 10&amp;#10;        tlim=90&amp;#10;    else:&amp;#10;        rtDict[exp_diff] = list(filter(None, rtDict[exp_diff]))&amp;#10;        time = np.mean(rtDict[exp_diff]) * time_coef&amp;#10;        tlim=0&amp;#10;        ### Reduce average trial time by 10%&amp;#10;    &amp;#10;    trial_counter=0&amp;#10;    thisdiffcor=0&amp;#10;&amp;#10;timer = core.CountdownTimer(time)&amp;#10;eq_gen.make_equation(exp_diff)&amp;#10;eq = &quot;%s = ?&quot; %(eq_gen.equation)&amp;#10;ans = int(eq_gen.ans)&amp;#10;timeout = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="if timer.getTime() &lt;= 0:&amp;#10;    continueRoutine = False&amp;#10;    timeout = True&amp;#10;if blockTimer.getTime() &lt;=tlim:&amp;#10;    trials_3.finished=True&amp;#10;    continueRoutine=False&amp;#10;    timeout=False&amp;#10;    endblock=True" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="if ((timer.getTime() &lt;= 0)) {&amp;#10;    continueRoutine = false;&amp;#10;    timeout = true;&amp;#10;}&amp;#10;if ((blockTimer.getTime() &lt;= tlim)) {&amp;#10;    trials_3.finished = true;&amp;#10;    continueRoutine = false;&amp;#10;    timeout = false;&amp;#10;    endblock = true;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;if (evntlg) {&amp;#10;    sr.write(&quot;00&quot;.encode());&amp;#10;}&amp;#10;if ((! endblock)) {&amp;#10;    psychoJS.experiment.addData(&quot;streak.count&quot;, streak_count);&amp;#10;    psychoJS.experiment.addData(&quot;time&quot;, time_coef);&amp;#10;    psychoJS.experiment.addData(&quot;time.coef&quot;, time_coef);&amp;#10;    psychoJS.experiment.addData(&quot;total.cor&quot;, total_cor);&amp;#10;    psychoJS.experiment.addData(&quot;trial.count&quot;, trial_counter);&amp;#10;    this_key = &quot;emp&quot;;&amp;#10;    if ((key_resp.keys.length &gt; 0)) {&amp;#10;        if (_pj.in_es6(&quot;s&quot;, key_resp.keys)) {&amp;#10;            trials_3.finished = true;&amp;#10;            continueRoutine = false;&amp;#10;        } else {&amp;#10;            this_key = Number.parseInt(key_resp.keys[0]);&amp;#10;            this_resp = [slider.getRating(), this_key];&amp;#10;            if (_pj.in_es6(ans, this_resp)) {&amp;#10;                msg = &quot;Correct!&quot;;&amp;#10;                streak_count += 1;&amp;#10;                total_cor += 1;&amp;#10;                thisdiffcor += 1;&amp;#10;                if ((trial_counter &lt;= 5)) {&amp;#10;                    pointer_pos -= 0.02;&amp;#10;                } else {&amp;#10;                    if ((trial_counter &gt; 5)) {&amp;#10;                        pointer_pos += 0.02;&amp;#10;                        if ((pointer_pos &gt;= 1.8)) {&amp;#10;                            pointer_pos = 1.8;&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            } else {&amp;#10;                if ((! _pj.in_es6(ans, this_resp))) {&amp;#10;                    msg = &quot;Incorrect!&quot;;&amp;#10;                }&amp;#10;            }&amp;#10;            if ((slider.getRT() === null)) {&amp;#10;                RT = key_resp.rt;&amp;#10;            } else {&amp;#10;                RT = slider.getRT();&amp;#10;            }&amp;#10;        }&amp;#10;    } else {&amp;#10;        if (timeout) {&amp;#10;            msg = &quot;Timed Out!&quot;;&amp;#10;            RT = time;&amp;#10;        }&amp;#10;    }&amp;#10;    if ((timeout || (msg === &quot;Incorrect!&quot;))) {&amp;#10;        pointer_pos += 0.1;&amp;#10;        if ((streak_count &gt; 0)) {&amp;#10;            streak_count = 0;&amp;#10;            streak_count -= 1;&amp;#10;        }&amp;#10;        if ((pointer_pos &gt;= 1.8)) {&amp;#10;            pointer_pos = 1.8;&amp;#10;        }&amp;#10;    }&amp;#10;    if ((streak_count === 3)) {&amp;#10;        time = (time * time_coef);&amp;#10;        streak_count = 0;&amp;#10;    }&amp;#10;    if ((streak_count === (- 3))) {&amp;#10;        time = (time / time_coef);&amp;#10;        streak_count = 0;&amp;#10;    }&amp;#10;    psychoJS.experiment.addData(&quot;trial.outcome&quot;, msg);&amp;#10;    if ((trial_counter === 1)) {&amp;#10;        if ((streak_count === 2)) {&amp;#10;            pointer_pos = 0.45;&amp;#10;        } else {&amp;#10;            if ((streak_count &lt; 2)) {&amp;#10;                pointer_pos = 0.9;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    trial_counter += 1;&amp;#10;} else {&amp;#10;    msg = &quot;End of block&quot;;&amp;#10;    perf = `You scored ${thisdiffcor} out of ${trial_counter} on this block&amp;#10;&amp;#10;Please press space to continue.`&amp;#10;;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="# Set serial to 0 if running&amp;#10;if evntlg:  sr.write(&quot;00&quot;.encode())&amp;#10;&amp;#10;# Set variables and adjust pointer&amp;#10;if not endblock:&amp;#10;    ## Save responses&amp;#10;    thisExp.addData('streak.count', streak_count)&amp;#10;    thisExp.addData('time', time_coef)&amp;#10;    thisExp.addData('time.coef', time_coef)&amp;#10;    thisExp.addData('total.cor', total_cor)&amp;#10;    thisExp.addData('trial.count', trial_counter)&amp;#10;    ##  Create placeholder this_key&amp;#10;    this_key = &quot;emp&quot;&amp;#10;    if len(key_resp.keys) &gt; 0:&amp;#10;        ## Cheat code&amp;#10;        if  &quot;s&quot; in key_resp.keys:&amp;#10;            trials_3.finished=True&amp;#10;            continueRoutine=False&amp;#10;        else:&amp;#10;            this_key = int(key_resp.keys[0])&amp;#10;            this_resp =[slider.getRating(), this_key]&amp;#10;            ## When correct&amp;#10;            if  ans in this_resp:&amp;#10;                msg = &quot;Correct!&quot;  # For correct trials add one to&amp;#10;                streak_count += 1   # correct counter&amp;#10;                total_cor += 1 &amp;#10;                thisdiffcor += 1 &amp;#10;                # and total correct.&amp;#10;                if trial_counter &lt;= 5: ##for first trials increase perf&amp;#10;                    pointer_pos -= 0.02  # increase userAverage pointer by 0.05&amp;#10;                    #if pointer_pos &lt;= .4: ## Don't go over 80%&amp;#10;                    #    pointer_pos = .4&amp;#10;                elif trial_counter &gt; 5: ## After trial 5, only decrease perf&amp;#10;                    pointer_pos += 0.02&amp;#10;                    if pointer_pos &gt;= 1.8:&amp;#10;                        pointer_pos = 1.8&amp;#10;            ##  When incorrect&amp;#10;            elif ans not in this_resp: # For incorrect answers&amp;#10;                msg = &quot;Incorrect!&quot;&amp;#10;            if slider.getRT() is None:&amp;#10;                RT = key_resp.rt&amp;#10;            else:&amp;#10;                RT = slider.getRT()&amp;#10;    ## When timed out&amp;#10;    elif timeout:&amp;#10;            msg = &quot;Timed Out!&quot;&amp;#10;            RT = time&amp;#10;&amp;#10;    if timeout or msg == &quot;Incorrect!&quot;:&amp;#10;        pointer_pos += 0.1  # add 0.1 (5%) to userAverage pointer (1-userAv)&amp;#10;        if streak_count &gt; 0:&amp;#10;            streak_count = 0&amp;#10;            streak_count -= 1  # set streak to 0 and minus 1 (count incorrect)&amp;#10;        if pointer_pos &gt;= 1.8:&amp;#10;            pointer_pos = 1.8&amp;#10;    ### Set next trial times if needed&amp;#10;    if streak_count == 3:  # every 3 correct answers reduces the mean time by 10%&amp;#10;        time = (time * time_coef)&amp;#10;        streak_count = 0  # resets the counter&amp;#10;&amp;#10;    if streak_count == -3:  # every three incorrect answers&amp;#10;        time = (time/time_coef) # time is increased by 10%&amp;#10;        streak_count = 0  # resets counter&amp;#10;&amp;#10;    ### save message (Corr, Timeout, Incor&amp;#10;    thisExp.addData('trial.outcome', msg)&amp;#10;&amp;#10;    if trial_counter == 1:&amp;#10;        if streak_count == 2:&amp;#10;            pointer_pos=0.45&amp;#10;        elif streak_count &lt; 2:&amp;#10;            pointer_pos=0.9&amp;#10;    trial_counter += 1&amp;#10;else:&amp;#10;    msg=&quot;End of block&quot;&amp;#10;    perf= f&quot;You scored {thisdiffcor} out of {trial_counter} on this block \n\n Please press space to continue.&quot;" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="print(&quot;Interrupted&quot;)" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="console.log(&quot;Interrupted&quot;);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;if (evntlg) {&amp;#10;    sr.write(&quot;80&quot;.encode());&amp;#10;    core.wait(0.1);&amp;#10;    sr.write(&quot;RR&quot;.encode());&amp;#10;    sr.write(&quot;00&quot;.encode());&amp;#10;}&amp;#10;if ((! endblock)) {&amp;#10;    psychoJS.experiment.addData(&quot;streak.count&quot;, streak_count);&amp;#10;    psychoJS.experiment.addData(&quot;time&quot;, time_coef);&amp;#10;    psychoJS.experiment.addData(&quot;time.coef&quot;, time_coef);&amp;#10;    psychoJS.experiment.addData(&quot;total.cor&quot;, total_cor);&amp;#10;    psychoJS.experiment.addData(&quot;trial.count&quot;, trial_counter);&amp;#10;    psychoJS.experiment.addData(&quot;trial.ans&quot;, ans);&amp;#10;    psychoJS.experiment.addData(&quot;trial.eq&quot;, eq);&amp;#10;    this_key = &quot;emp&quot;;&amp;#10;    if ((key_resp.keys.length &gt; 0)) {&amp;#10;        if (_pj.in_es6(&quot;s&quot;, key_resp.keys)) {&amp;#10;            trials_3.finished = true;&amp;#10;            continueRoutine = false;&amp;#10;        } else {&amp;#10;            this_key = Number.parseInt(key_resp.keys[0]);&amp;#10;            this_resp = [slider.getRating(), this_key];&amp;#10;            if (_pj.in_es6(ans, this_resp)) {&amp;#10;                msg = &quot;Correct!&quot;;&amp;#10;                streak_count += 1;&amp;#10;                total_cor += 1;&amp;#10;                thisdiffcor += 1;&amp;#10;                if ((trial_counter &lt;= 5)) {&amp;#10;                    pointer_pos -= 0.02;&amp;#10;                } else {&amp;#10;                    if ((trial_counter &gt; 5)) {&amp;#10;                        pointer_pos += 0.02;&amp;#10;                        if ((pointer_pos &gt;= 1.8)) {&amp;#10;                            pointer_pos = 1.8;&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            } else {&amp;#10;                if ((! _pj.in_es6(ans, this_resp))) {&amp;#10;                    msg = &quot;Incorrect!&quot;;&amp;#10;                }&amp;#10;            }&amp;#10;            if ((slider.getRT() === null)) {&amp;#10;                RT = key_resp.rt;&amp;#10;            } else {&amp;#10;                RT = slider.getRT();&amp;#10;            }&amp;#10;        }&amp;#10;    } else {&amp;#10;        if (timeout) {&amp;#10;            msg = &quot;Timed Out!&quot;;&amp;#10;            RT = time;&amp;#10;        }&amp;#10;    }&amp;#10;    if ((timeout || (msg === &quot;Incorrect!&quot;))) {&amp;#10;        pointer_pos += 0.1;&amp;#10;        if ((streak_count &gt; 0)) {&amp;#10;            streak_count = 0;&amp;#10;            streak_count -= 1;&amp;#10;        }&amp;#10;        if ((pointer_pos &gt;= 1.8)) {&amp;#10;            pointer_pos = 1.8;&amp;#10;        }&amp;#10;    }&amp;#10;    if ((streak_count === 3)) {&amp;#10;        time = (time * time_coef);&amp;#10;        streak_count = 0;&amp;#10;        if (evntlg) {&amp;#10;            sr.write(&quot;80&quot;.encode());&amp;#10;            core.wait(0.1);&amp;#10;            sr.write(&quot;RR&quot;.encode());&amp;#10;            sr.write(&quot;00&quot;.encode());&amp;#10;        }&amp;#10;    }&amp;#10;    if ((streak_count === (- 3))) {&amp;#10;        time = (time / time_coef);&amp;#10;        streak_count = 0;&amp;#10;        if (evntlg) {&amp;#10;            sr.write(&quot;05&quot;.encode());&amp;#10;            core.wait(0.1);&amp;#10;            sr.write(&quot;00&quot;.encode());&amp;#10;        }&amp;#10;    }&amp;#10;    psychoJS.experiment.addData(&quot;trial.outcome&quot;, msg);&amp;#10;    if ((trial_counter === 1)) {&amp;#10;        if ((streak_count === 2)) {&amp;#10;            pointer_pos = 0.45;&amp;#10;        } else {&amp;#10;            if ((streak_count &lt; 2)) {&amp;#10;                pointer_pos = 0.9;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    trial_counter += 1;&amp;#10;} else {&amp;#10;    msg = &quot;End of block&quot;;&amp;#10;    propcor = (thisdiffcor / trial_counter);&amp;#10;    if ((propcor &lt;= 0.5)) {&amp;#10;        thisrange = &quot;lowest&quot;;&amp;#10;    } else {&amp;#10;        if (((propcor &gt; 0.5) &amp;&amp; (propcor &lt; 0.7))) {&amp;#10;            thisrange = &quot;low&quot;;&amp;#10;        } else {&amp;#10;            thisrange = &quot;low to middle&quot;;&amp;#10;        }&amp;#10;    }&amp;#10;    perf = `You scored ${thisdiffcor} out of ${trial_counter} on this block.&amp;#10;&amp;#10;Your response speed was in the ${thisrange} range.&amp;#10;&amp;#10;Please press space to continue.`&amp;#10;;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="# Set serial to 0 if running&amp;#10;if evntlg :&amp;#10;    sr.write(&quot;80&quot;.encode())&amp;#10;    core.wait(0.1)&amp;#10;    sr.write(&quot;RR&quot;.encode())&amp;#10;    sr.write(&quot;00&quot;.encode())&amp;#10;# Set variables and adjust pointer&amp;#10;if not endblock:&amp;#10;    ## Save responses&amp;#10;    thisExp.addData('streak.count', streak_count)&amp;#10;    thisExp.addData('time', time_coef)&amp;#10;    thisExp.addData('time.coef', time_coef)&amp;#10;    thisExp.addData('total.cor', total_cor)&amp;#10;    thisExp.addData('trial.count', trial_counter)&amp;#10;    thisExp.addData('trial.ans', ans)&amp;#10;    thisExp.addData('trial.eq', eq)&amp;#10;    ##  Create placeholder this_key&amp;#10;    this_key = &quot;emp&quot;&amp;#10;    if len(key_resp.keys) &gt; 0:&amp;#10;        ## Cheat code&amp;#10;        if  &quot;s&quot; in key_resp.keys:&amp;#10;            trials_3.finished=True&amp;#10;            continueRoutine=False&amp;#10;        else:&amp;#10;            this_key = int(key_resp.keys[0])&amp;#10;            this_resp =[slider.getRating(), this_key]&amp;#10;            ## When correct&amp;#10;            if  ans in this_resp:&amp;#10;                msg = &quot;Correct!&quot;  # For correct trials add one to&amp;#10;                streak_count += 1   # correct counter&amp;#10;                total_cor += 1 &amp;#10;                thisdiffcor += 1 &amp;#10;                # and total correct.&amp;#10;                if trial_counter &lt;= 5: ##for first trials increase perf&amp;#10;                    pointer_pos -= 0.02  # increase userAverage pointer by 0.05&amp;#10;                    #if pointer_pos &lt;= .4: ## Don't go over 80%&amp;#10;                    #    pointer_pos = .4&amp;#10;                elif trial_counter &gt; 5: ## After trial 5, only decrease perf&amp;#10;                    pointer_pos += 0.02&amp;#10;                    if pointer_pos &gt;= 1.8:&amp;#10;                        pointer_pos = 1.8&amp;#10;            ##  When incorrect&amp;#10;            elif ans not in this_resp: # For incorrect answers&amp;#10;                msg = &quot;Incorrect!&quot;&amp;#10;            if slider.getRT() is None:&amp;#10;                RT = key_resp.rt&amp;#10;            else:&amp;#10;                RT = slider.getRT()&amp;#10;    ## When timed out&amp;#10;    elif timeout:&amp;#10;            msg = &quot;Timed Out!&quot;&amp;#10;            RT = time&amp;#10;&amp;#10;    if timeout or msg == &quot;Incorrect!&quot;:&amp;#10;        pointer_pos += 0.1  # add 0.1 (5%) to userAverage pointer (1-userAv)&amp;#10;        if streak_count &gt; 0:&amp;#10;            streak_count = 0&amp;#10;            streak_count -= 1  # set streak to 0 and minus 1 (count incorrect)&amp;#10;        if pointer_pos &gt;= 1.8:&amp;#10;            pointer_pos = 1.8&amp;#10;    ### Set next trial times if needed&amp;#10;    if streak_count == 3:  # every 3 correct answers reduces the mean time by 10%&amp;#10;        time = (time * time_coef)&amp;#10;        streak_count = 0  # resets the counter&amp;#10;        if evntlg :&amp;#10;            sr.write(&quot;80&quot;.encode())&amp;#10;            core.wait(0.1)&amp;#10;            sr.write(&quot;RR&quot;.encode())&amp;#10;            sr.write(&quot;00&quot;.encode())&amp;#10;    if streak_count == -3:  # every three incorrect answers&amp;#10;        time = (time/time_coef) # time is increased by 10%&amp;#10;        streak_count = 0  # resets counter&amp;#10;        if evntlg :&amp;#10;            sr.write(&quot;05&quot;.encode())&amp;#10;            core.wait(0.1)&amp;#10;            sr.write(&quot;00&quot;.encode())&amp;#10;&amp;#10;    ### save message (Corr, Timeout, Incor&amp;#10;    thisExp.addData('trial.outcome', msg)&amp;#10;&amp;#10;    if trial_counter == 1:&amp;#10;        if streak_count == 2:&amp;#10;            pointer_pos=0.45&amp;#10;        elif streak_count &lt; 2:&amp;#10;            pointer_pos=0.9&amp;#10;    trial_counter += 1&amp;#10;else:&amp;#10;    msg=&quot;End of block&quot;&amp;#10;    propcor=(thisdiffcor/trial_counter)&amp;#10;    if propcor &lt;= 0.5:&amp;#10;        thisrange=&quot;lowest&quot;&amp;#10;    elif  propcor &gt; 0.5 and propcor &lt; 0.7:&amp;#10;        thisrange=&quot;low&quot;&amp;#10;    else:&amp;#10;        thisrange = &quot;low to middle&quot;&amp;#10;    perf= f&quot;You scored {thisdiffcor} out of {trial_counter} on this block. \n\n Your response speed was in the {thisrange} range. \n\n Please press space to continue.&quot;" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="code" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -511,7 +531,7 @@
         <Param val="slider" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="$slidershow" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="constant" name="readOnly"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="(1.0, 0.1)" valType="list" updates="constant" name="size"/>
@@ -523,7 +543,7 @@
         <Param val="False" valType="bool" updates="constant" name="storeHistory"/>
         <Param val="True" valType="bool" updates="constant" name="storeRating"/>
         <Param val="True" valType="bool" updates="constant" name="storeRatingTime"/>
-        <Param val="[]" valType="list" updates="constant" name="styleTweaks"/>
+        <Param val="()" valType="list" updates="constant" name="styleTweaks"/>
         <Param val="choice" valType="str" updates="constant" name="styles"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)" valType="list" updates="constant" name="ticks"/>
@@ -533,6 +553,7 @@
       <KeyboardComponent name="key_resp" plugin="None">
         <Param val="&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;,&quot;0&quot;,&quot;s&quot;" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -661,15 +682,15 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="if (evntlg) {&amp;#10;    sr.write(&quot;01&quot;.encode());&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="if evntlg :  sr.write(&quot;01&quot;.encode()) #Fixation signal&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="if (evntlg) {&amp;#10;    sr.write(&quot;01&quot;.encode());&amp;#10;    core.wait(0.1);&amp;#10;    sr.write(&quot;00&quot;.encode());&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="## 40 is event code 2 - reserved here for fixation&amp;#10;if evntlg :&amp;#10;    sr.write(&quot;01&quot;.encode()) #Fixation signal&amp;#10;    core.wait(0.10)&amp;#10;    sr.write(&quot;00&quot;.encode())&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="if (evntlg) {&amp;#10;    sr.write(&quot;00&quot;.encode());&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="if evntlg :    sr.write(&quot;00&quot;.encode()) #set lines to zero" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="fix_pulse" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -721,13 +742,13 @@
       <CodeComponent name="setup_exp" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="import serial&amp;#10;from misty import misty&amp;#10;# Create misty sum object&amp;#10;eq_gen = misty.MistSums()&amp;#10;eq_gen.make_equation(&quot;easy1&quot;)&amp;#10;print(eq_gen.equation)&amp;#10;# Check for serial connection&amp;#10;evntlg = 'sr' in locals() or 'sr' in globals()&amp;#10;if evntlg :    difbyt=&quot;02&quot;.encode()&amp;#10;try:&amp;#10;    sr = serial.Serial(&quot;INSERTCOMHERE&quot;, 115200, timeout=1)&amp;#10;    print(&quot;Serial Connected&quot;)&amp;#10;except serial.serialutil.SerialException:&amp;#10;    print(&quot;Serial Not Connected&quot;)&amp;#10;&amp;#10;evntlg = 'sr' in locals() or 'sr' in globals()&amp;#10;&amp;#10;# Set full containeer variables for experiment &amp;#10;# appearance variables&amp;#10;pointer_pos = .8  # x position of pointer&amp;#10;msg = &quot;&quot;  # feedback message&amp;#10;eq = &quot;&quot;  # equation string&amp;#10;&amp;#10;# Set placeholder variables for experiment&amp;#10;# Behaviour&amp;#10;streak_count = 0  # current streak&amp;#10;total_cor = 0  # total number of correct answers&amp;#10;rtDict = {} # Dictionary for lists of reaction times&amp;#10;expDict={}&amp;#10;time = 20  # starting value for trial time&amp;#10;difficulty = &quot;easy1&quot;  # diffculty of equation&amp;#10;time_coef = .9  # amount to reduce trial time by&amp;#10;trial_counter = 0  # current trial&amp;#10;perf=&quot;&quot;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="import * as serial from 'serial';&amp;#10;import {misty} from 'misty';&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;eq_gen = new misty.MistSums();&amp;#10;eq_gen.make_equation(&quot;easy1&quot;);&amp;#10;console.log(eq_gen.equation);&amp;#10;evntlg = (_pj.in_es6(&quot;sr&quot;, locals()) || _pj.in_es6(&quot;sr&quot;, globals()));&amp;#10;if (evntlg) {&amp;#10;    difbyt = &quot;02&quot;.encode();&amp;#10;}&amp;#10;try {&amp;#10;    sr = new serial.Serial(&quot;INSERTCOMHERE&quot;, 115200, {&quot;timeout&quot;: 1});&amp;#10;    console.log(&quot;Serial Connected&quot;);&amp;#10;} catch(e) {&amp;#10;    if ((e instanceof serial.serialutil.SerialException)) {&amp;#10;        console.log(&quot;Serial Not Connected&quot;);&amp;#10;    } else {&amp;#10;        throw e;&amp;#10;    }&amp;#10;}&amp;#10;evntlg = (_pj.in_es6(&quot;sr&quot;, locals()) || _pj.in_es6(&quot;sr&quot;, globals()));&amp;#10;pointer_pos = 0.8;&amp;#10;msg = &quot;&quot;;&amp;#10;eq = &quot;&quot;;&amp;#10;streak_count = 0;&amp;#10;total_cor = 0;&amp;#10;rtDict = {};&amp;#10;expDict = {};&amp;#10;time = 20;&amp;#10;difficulty = &quot;easy1&quot;;&amp;#10;time_coef = 0.9;&amp;#10;trial_counter = 0;&amp;#10;perf = &quot;&quot;;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="if (evntlg) {&amp;#10;    sr.write(&quot;RR&quot;.encode());&amp;#10;    core.wait(0.025);&amp;#10;    sr.write(&quot;0F&quot;.encode());&amp;#10;    core.wait(0.1);&amp;#10;    sr.write(&quot;00&quot;.encode());&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="if evntlg :&amp;#10;    sr.write(&quot;RR&quot;.encode())&amp;#10;    core.wait(0.025) #wait 25 mS after resetting&amp;#10;    sr.write(&quot;0F&quot;.encode()) #Exp started&amp;#10;    core.wait(0.10) #wait 100MS resetting&amp;#10;    sr.write(&quot;00&quot;.encode()) #Exp started&amp;#10;    " valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="import serial&amp;#10;from misty import misty&amp;#10;# Create misty sum object&amp;#10;eq_gen = misty.MistSums()&amp;#10;eq_gen.make_equation(&quot;easy1&quot;)&amp;#10;# Check for serial connection&amp;#10;try:&amp;#10;    sr = serial.Serial(&quot;COM8&quot;, 115200, timeout=1)&amp;#10;    print(&quot;Serial Connected&quot;)&amp;#10;    sertest= f'Serial Connected.'&amp;#10;    s_indicator_1 = 0&amp;#10;    s_indicator_2 = 0&amp;#10;    s_indicator_3 = 0&amp;#10;    &amp;#10;except serial.serialutil.SerialException:&amp;#10;    sertest=&quot;Serial Not Connected&quot;&amp;#10;    s_indicator_1 = 0&amp;#10;    s_indicator_2 = 0&amp;#10;    s_indicator_3 = 0&amp;#10;evntlg = 'sr' in locals() or 'sr' in globals()&amp;#10;&amp;#10;###C0 = event code 3 - reserved here for easy1 mode&amp;#10;pracbyt=&quot;03&quot;&amp;#10;&amp;#10;### Invisible slider&amp;#10;slidershow=(-5,-5)&amp;#10;### If you want the slider response&amp;#10;### then uncomment below&amp;#10;#slidershow=(0, -0.4)&amp;#10;&amp;#10;# Set full containeer variables for experiment &amp;#10;# appearance variables&amp;#10;pointer_pos = .8  # x position of pointer&amp;#10;msg = &quot;&quot;  # feedback message&amp;#10;eq = &quot;&quot;  # equation string&amp;#10;&amp;#10;# Set placeholder variables for experiment&amp;#10;# Behaviour&amp;#10;streak_count = 0  # current streak&amp;#10;total_cor = 0  # total number of correct answers&amp;#10;rtDict = {} # Dictionary for lists of reaction times&amp;#10;expDict={}&amp;#10;time = 20  # starting value for trial time&amp;#10;difficulty = &quot;easy1&quot;  # diffculty of equation&amp;#10;time_coef = .9  # amount to reduce trial time by&amp;#10;trial_counter = 0  # current trial&amp;#10;perf=&quot;&quot;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="import * as serial from 'serial';&amp;#10;import {misty} from 'misty';&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;eq_gen = new misty.MistSums();&amp;#10;eq_gen.make_equation(&quot;easy1&quot;);&amp;#10;try {&amp;#10;    sr = new serial.Serial(&quot;COM8&quot;, 115200, {&quot;timeout&quot;: 1});&amp;#10;    console.log(&quot;Serial Connected&quot;);&amp;#10;    sertest = `Serial Connected.`;&amp;#10;    s_indicator_1 = 0;&amp;#10;    s_indicator_2 = 0;&amp;#10;    s_indicator_3 = 0;&amp;#10;} catch(e) {&amp;#10;    if ((e instanceof serial.serialutil.SerialException)) {&amp;#10;        sertest = &quot;Serial Not Connected&quot;;&amp;#10;        s_indicator_1 = 0;&amp;#10;        s_indicator_2 = 0;&amp;#10;        s_indicator_3 = 0;&amp;#10;    } else {&amp;#10;        throw e;&amp;#10;    }&amp;#10;}&amp;#10;evntlg = (_pj.in_es6(&quot;sr&quot;, locals()) || _pj.in_es6(&quot;sr&quot;, globals()));&amp;#10;pracbyt = &quot;03&quot;;&amp;#10;slidershow = [(- 5), (- 5)];&amp;#10;pointer_pos = 0.8;&amp;#10;msg = &quot;&quot;;&amp;#10;eq = &quot;&quot;;&amp;#10;streak_count = 0;&amp;#10;total_cor = 0;&amp;#10;rtDict = {};&amp;#10;expDict = {};&amp;#10;time = 20;&amp;#10;difficulty = &quot;easy1&quot;;&amp;#10;time_coef = 0.9;&amp;#10;trial_counter = 0;&amp;#10;perf = &quot;&quot;;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="if (evntlg) {&amp;#10;    core.wait(0.1);&amp;#10;    sr.write(&quot;FF&quot;.encode());&amp;#10;    core.wait(0.1);&amp;#10;    sr.write(&quot;00&quot;.encode());&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if evntlg :&amp;#10;    ## FF is event code 255 - all channels to +5v&amp;#10;    ## Shouldn't matter which pin is monitored for&amp;#10;    ## Triggering&amp;#10;    core.wait(0.1) #wait 100MS resetting&amp;#10;    sr.write(&quot;FF&quot;.encode()) #Exp started&amp;#10;    core.wait(0.1) #wait 100MS resetting&amp;#10;    sr.write(&quot;00&quot;.encode()) #Exp started&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="if evntlg:&amp;#10;    if s_indicator_1 &lt; 0.19:&amp;#10;        s_indicator_1 += 0.05&amp;#10;        s_indicator_3 += 0.05&amp;#10;    if s_indicator_2 &lt; 0.70:&amp;#10;        s_indicator_2 += 0.05&amp;#10;        &amp;#10;else:&amp;#10;    if s_indicator_1 &lt; 1:&amp;#10;        s_indicator_1 += 0.1" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="if (evntlg) {&amp;#10;    if ((s_indicator_1 &lt; 0.19)) {&amp;#10;        s_indicator_1 += 0.05;&amp;#10;        s_indicator_3 += 0.05;&amp;#10;    }&amp;#10;    if ((s_indicator_2 &lt; 0.7)) {&amp;#10;        s_indicator_2 += 0.05;&amp;#10;    }&amp;#10;} else {&amp;#10;    if ((s_indicator_1 &lt; 1)) {&amp;#10;        s_indicator_1 += 0.1;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="if evntlg :&amp;#10;    sr.flush()&amp;#10;    sr.close()" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="if (evntlg) {&amp;#10;    sr.flush();&amp;#10;    sr.close();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
@@ -745,7 +766,7 @@
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
         <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="0.1" valType="num" updates="constant" name="letterHeight"/>
         <Param val="text" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
@@ -757,14 +778,15 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Please wait for the researcher\'s instructions." valType="str" updates="constant" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="Please wait for the experimenter's instructions" valType="str" updates="set every repeat" name="text"/>
+        <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="key_resp_2" plugin="None">
         <Param val="'l'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -781,6 +803,62 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
+      <PolygonComponent name="polygon" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="$(s_indicator_1, s_indicator_2, s_indicator_3)" valType="color" updates="set every frame" name="fillColor"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="white" valType="color" updates="constant" name="lineColor"/>
+        <Param val="1" valType="num" updates="constant" name="lineWidth"/>
+        <Param val="4" valType="int" updates="constant" name="nVertices"/>
+        <Param val="polygon" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(-0.5, -0.5)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="circle" valType="str" updates="None" name="shape"/>
+        <Param val="(0.25, 0.25)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="norm" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="list" updates="constant" name="vertices"/>
+      </PolygonComponent>
+      <TextComponent name="text_8" plugin="None">
+        <Param val="-1.0000, -1.0000, -1.0000" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="text_8" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(-0.49, -0.5)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$sertest" valType="str" updates="set every repeat" name="text"/>
+        <Param val="norm" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="0.1" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
     </Routine>
     <Routine name="training_routine_1">
       <RoutineSettingsComponent name="training_routine_1" plugin="None">
@@ -804,15 +882,15 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="msg = &quot;&quot;;&amp;#10;if ((trials_2.thisN === 0)) {&amp;#10;    blockTimer = new core.CountdownTimer(train_time);&amp;#10;    rtDict[train_diff] = [];&amp;#10;}&amp;#10;eq_gen.make_equation(train_diff);&amp;#10;eq = `${eq_gen.equation}`;&amp;#10;ans = Number.parseInt(eq_gen.ans);&amp;#10;if (evntlg) {&amp;#10;    sr.write(difbyt);&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="msg = &quot;&quot;&amp;#10;if trials_2.thisN==0:&amp;#10;    blockTimer=core.CountdownTimer(train_time)&amp;#10;    rtDict[train_diff]=[]&amp;#10;&amp;#10;#Generate response&amp;#10;eq_gen.make_equation(train_diff)&amp;#10;eq = &quot;%s = ?&quot; %(eq_gen.equation)&amp;#10;ans = int(eq_gen.ans)&amp;#10;&amp;#10;# If serial object is loaded then use it&amp;#10;if evntlg :    sr.write(difbyt)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="msg = &quot;&quot;;&amp;#10;if ((trials_2.thisN === 0)) {&amp;#10;    blockTimer = new core.CountdownTimer(train_time);&amp;#10;    rtDict[train_diff] = [];&amp;#10;}&amp;#10;eq_gen.make_equation(train_diff);&amp;#10;eq = `${eq_gen.equation}`;&amp;#10;ans = Number.parseInt(eq_gen.ans);&amp;#10;if (evntlg) {&amp;#10;    sr.write(train_byt.toString().encode());&amp;#10;    core.wait(0.1);&amp;#10;    sr.write(&quot;RR&quot;.encode());&amp;#10;    sr.write(&quot;00&quot;.encode());&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="msg = &quot;&quot;&amp;#10;if trials_2.thisN==0:&amp;#10;    blockTimer=core.CountdownTimer(train_time)&amp;#10;    rtDict[train_diff]=[]&amp;#10;&amp;#10;#Generate response&amp;#10;eq_gen.make_equation(train_diff)&amp;#10;eq = &quot;%s = ?&quot; %(eq_gen.equation)&amp;#10;ans = int(eq_gen.ans)&amp;#10;&amp;#10;if evntlg :&amp;#10;    sr.write(str(train_byt).encode())&amp;#10;    core.wait(0.1)&amp;#10;    sr.write(&quot;RR&quot;.encode())&amp;#10;    sr.write(&quot;00&quot;.encode())" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="if blockTimer.getTime() &lt;= 0:&amp;#10;    endblock=True&amp;#10;    continueRoutine = False&amp;#10;    trials_2.finished = True&amp;#10;else:&amp;#10;    endblock=False" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="if ((blockTimer.getTime() &lt;= 0)) {&amp;#10;    endblock = true;&amp;#10;    continueRoutine = false;&amp;#10;    trials_2.finished = true;&amp;#10;} else {&amp;#10;    endblock = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;if (evntlg) {&amp;#10;    sr.write(&quot;00&quot;.encode());&amp;#10;}&amp;#10;if ((! endblock)) {&amp;#10;    this_key = &quot;emp&quot;;&amp;#10;    if ((key_resp_train.keys.length &gt; 0)) {&amp;#10;        if (_pj.in_es6(&quot;s&quot;, key_resp_train.keys)) {&amp;#10;            rtDict[train_diff].push(10);&amp;#10;            trials_2.finished = true;&amp;#10;            continueRoutine = false;&amp;#10;        } else {&amp;#10;            this_key = Number.parseInt(key_resp_train.keys[0]);&amp;#10;            this_resp = [slider_training.getRating(), this_key];&amp;#10;        }&amp;#10;    }&amp;#10;    if (_pj.in_es6(ans, this_resp)) {&amp;#10;        msg = &quot;Correct!&quot;;&amp;#10;    } else {&amp;#10;        if ((! _pj.in_es6(ans, this_resp))) {&amp;#10;            msg = &quot;Incorrect!&quot;;&amp;#10;        }&amp;#10;    }&amp;#10;    if ((slider.getRT() === null)) {&amp;#10;        RT = key_resp_train.rt;&amp;#10;    } else {&amp;#10;        RT = slider_training.getRT();&amp;#10;    }&amp;#10;    rtDict[train_diff].push(RT);&amp;#10;    psychoJS.experiment.addData(&quot;trial.outcome&quot;, msg);&amp;#10;} else {&amp;#10;    msg = &quot;End of block&quot;;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="# Set serial to 0 if running&amp;#10;if evntlg:  sr.write(&quot;00&quot;.encode())&amp;#10;if not endblock:&amp;#10;    this_key = &quot;emp&quot;&amp;#10;    if len(key_resp_train.keys) &gt; 0:&amp;#10;        if  &quot;s&quot; in key_resp_train.keys:&amp;#10;            rtDict[train_diff].append(10)&amp;#10;            trials_2.finished=True&amp;#10;            continueRoutine=False&amp;#10;        else:&amp;#10;            this_key = int(key_resp_train.keys[0])&amp;#10;            this_resp =[slider_training.getRating(), this_key]&amp;#10;&amp;#10;    if  ans in this_resp:&amp;#10;        msg = &quot;Correct!&quot;  # For correct trials add one to&amp;#10;        &amp;#10;    elif ans not in this_resp: # For incorrect answers&amp;#10;        msg = &quot;Incorrect!&quot;&amp;#10;  &amp;#10;    if slider.getRT() is None:&amp;#10;        RT = key_resp_train.rt&amp;#10;    else:&amp;#10;        RT = slider_training.getRT()&amp;#10;    #Save rt to dictionary&amp;#10;    rtDict[train_diff].append(RT)&amp;#10;&amp;#10;    ### save message (Corr, Timeout, Incor&amp;#10;    thisExp.addData('trial.outcome', msg)&amp;#10;else:&amp;#10;    msg=&quot;End of block&quot;&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;if (evntlg) {&amp;#10;    sr.write(&quot;80&quot;.encode());&amp;#10;    core.wait(0.1);&amp;#10;    sr.write(&quot;RR&quot;.encode());&amp;#10;    sr.write(&quot;00&quot;.encode());&amp;#10;}&amp;#10;if ((! endblock)) {&amp;#10;    this_key = &quot;emp&quot;;&amp;#10;    if ((key_resp_train.keys.length &gt; 0)) {&amp;#10;        if (_pj.in_es6(&quot;s&quot;, key_resp_train.keys)) {&amp;#10;            rtDict[train_diff].push(10);&amp;#10;            trials_2.finished = true;&amp;#10;            continueRoutine = false;&amp;#10;        } else {&amp;#10;            this_key = Number.parseInt(key_resp_train.keys[0]);&amp;#10;            this_resp = [slider_training.getRating(), this_key];&amp;#10;        }&amp;#10;    }&amp;#10;    if (_pj.in_es6(ans, this_resp)) {&amp;#10;        msg = &quot;Correct!&quot;;&amp;#10;    } else {&amp;#10;        if ((! _pj.in_es6(ans, this_resp))) {&amp;#10;            msg = &quot;Incorrect!&quot;;&amp;#10;        }&amp;#10;    }&amp;#10;    if ((slider.getRT() === null)) {&amp;#10;        RT = key_resp_train.rt;&amp;#10;    } else {&amp;#10;        RT = slider_training.getRT();&amp;#10;    }&amp;#10;    rtDict[train_diff].push(RT);&amp;#10;    psychoJS.experiment.addData(&quot;trial.outcome&quot;, msg);&amp;#10;    psychoJS.experiment.addData(&quot;training.difficulty&quot;, train_diff);&amp;#10;    psychoJS.experiment.addData(&quot;training.bytdiff&quot;, train_diff);&amp;#10;} else {&amp;#10;    msg = &quot;End of block&quot;;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="# Set serial to 0 if running&amp;#10;if evntlg :&amp;#10;    sr.write(&quot;80&quot;.encode())&amp;#10;    core.wait(0.1)&amp;#10;    sr.write(&quot;RR&quot;.encode())&amp;#10;    sr.write(&quot;00&quot;.encode())&amp;#10;    &amp;#10;if not endblock:&amp;#10;    this_key = &quot;emp&quot;&amp;#10;    if len(key_resp_train.keys) &gt; 0:&amp;#10;        if  &quot;s&quot; in key_resp_train.keys:&amp;#10;            rtDict[train_diff].append(10)&amp;#10;            trials_2.finished=True&amp;#10;            continueRoutine=False&amp;#10;        else:&amp;#10;            this_key = int(key_resp_train.keys[0])&amp;#10;            this_resp =[slider_training.getRating(), this_key]&amp;#10;&amp;#10;    if  ans in this_resp:&amp;#10;        msg = &quot;Correct!&quot;  # For correct trials add one to&amp;#10;        &amp;#10;    elif ans not in this_resp: # For incorrect answers&amp;#10;        msg = &quot;Incorrect!&quot;&amp;#10;  &amp;#10;    if slider.getRT() is None:&amp;#10;        RT = key_resp_train.rt&amp;#10;    else:&amp;#10;        RT = slider_training.getRT()&amp;#10;    #Save rt to dictionary&amp;#10;    rtDict[train_diff].append(RT)&amp;#10;&amp;#10;    ### save message (Corr, Timeout, Incor&amp;#10;    thisExp.addData('trial.outcome', msg)&amp;#10;    thisExp.addData('training.difficulty', train_diff)&amp;#10;    thisExp.addData('training.bytdiff', train_diff)&amp;#10;    &amp;#10;else:&amp;#10;    msg=&quot;End of block&quot;&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="training_code" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -876,7 +954,7 @@
         <Param val="slider_training" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="$slidershow" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="constant" name="readOnly"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="(1.0, 0.1)" valType="list" updates="constant" name="size"/>
@@ -888,7 +966,7 @@
         <Param val="False" valType="bool" updates="constant" name="storeHistory"/>
         <Param val="True" valType="bool" updates="constant" name="storeRating"/>
         <Param val="True" valType="bool" updates="constant" name="storeRatingTime"/>
-        <Param val="[]" valType="list" updates="constant" name="styleTweaks"/>
+        <Param val="()" valType="list" updates="constant" name="styleTweaks"/>
         <Param val="choice" valType="str" updates="constant" name="styles"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)" valType="list" updates="constant" name="ticks"/>
@@ -898,6 +976,7 @@
       <KeyboardComponent name="key_resp_train" plugin="None">
         <Param val="&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;,&quot;0&quot;,&quot;s&quot;" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -955,15 +1034,15 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="if (evntlg) {&amp;#10;    sr.write(&quot;03&quot;.encode());&amp;#10;}&amp;#10;console.log(eq_gen.__class__);&amp;#10;msg = &quot;&quot;;&amp;#10;eq_gen.make_equation(&quot;easy1&quot;);&amp;#10;eq = `${eq_gen.equation}`;&amp;#10;ans = Number.parseInt(eq_gen.ans);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# If serial object is loaded then use it&amp;#10;# Practice trials are all easy1&amp;#10;if evntlg :    sr.write(&quot;03&quot;.encode())&amp;#10;print(eq_gen.__class__)&amp;#10;# Feedback message starts empty&amp;#10;msg = &quot;&quot;&amp;#10;&amp;#10;#Set sum for this repetition&amp;#10;eq_gen.make_equation(&quot;easy1&quot;)&amp;#10;eq = &quot;%s = ?&quot; %(eq_gen.equation)&amp;#10;ans = int(eq_gen.ans)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="if (evntlg) {&amp;#10;    sr.write(&quot;FF&quot;.encode());&amp;#10;    core.wait(0.1);&amp;#10;    sr.write(&quot;00&quot;.encode());&amp;#10;}&amp;#10;msg = &quot;&quot;;&amp;#10;eq_gen.make_equation(&quot;easy1&quot;);&amp;#10;eq = `${eq_gen.equation}`;&amp;#10;ans = Number.parseInt(eq_gen.ans);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# If serial object is loaded then use it&amp;#10;# Practice trials are all easy1&amp;#10;if evntlg :&amp;#10;    sr.write(&quot;FF&quot;.encode())&amp;#10;    core.wait(0.1)&amp;#10;    sr.write(&quot;00&quot;.encode())&amp;#10;# Feedback message starts empty&amp;#10;msg = &quot;&quot;&amp;#10;&amp;#10;#Set sum for this repetition&amp;#10;eq_gen.make_equation(&quot;easy1&quot;)&amp;#10;eq = &quot;%s = ?&quot; %(eq_gen.equation)&amp;#10;ans = int(eq_gen.ans)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;if (evntlg) {&amp;#10;    sr.write(&quot;00&quot;.encode());&amp;#10;}&amp;#10;this_key = &quot;emp&quot;;&amp;#10;if ((key_resp_4.keys.length &gt; 0)) {&amp;#10;    if (_pj.in_es6(&quot;s&quot;, key_resp_4.keys)) {&amp;#10;        prac_trials.finished = true;&amp;#10;        continueRoutine = false;&amp;#10;    } else {&amp;#10;        this_key = Number.parseInt(key_resp_4.keys[0]);&amp;#10;    }&amp;#10;}&amp;#10;this_resp = [slider_3.getRating(), this_key];&amp;#10;if (_pj.in_es6(ans, this_resp)) {&amp;#10;    msg = &quot;Correct!&quot;;&amp;#10;} else {&amp;#10;    if ((! _pj.in_es6(ans, this_resp))) {&amp;#10;        msg = &quot;Incorrect!&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="if evntlg:  sr.write(&quot;00&quot;.encode())&amp;#10;&amp;#10;# Set variables and adjust pointer&amp;#10;this_key = &quot;emp&quot;&amp;#10;if len(key_resp_4.keys) &gt; 0:&amp;#10;    if  &quot;s&quot; in key_resp_4.keys:&amp;#10;        prac_trials.finished=True&amp;#10;        continueRoutine=False&amp;#10;    else:&amp;#10;        this_key = int(key_resp_4.keys[0])&amp;#10;this_resp =[slider_3.getRating(), this_key]&amp;#10;&amp;#10;if  ans in this_resp:&amp;#10;    msg = &quot;Correct!&quot;  # For correct trials add one to&amp;#10;        &amp;#10;elif ans not in this_resp: # For incorrect answers&amp;#10;    msg = &quot;Incorrect!&quot;" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;if (evntlg) {&amp;#10;    sr.write(&quot;80&quot;.encode());&amp;#10;    core.wait(0.1);&amp;#10;    sr.write(&quot;00&quot;.encode());&amp;#10;}&amp;#10;this_key = &quot;emp&quot;;&amp;#10;if ((key_resp_4.keys.length &gt; 0)) {&amp;#10;    if (_pj.in_es6(&quot;s&quot;, key_resp_4.keys)) {&amp;#10;        prac_trials.finished = true;&amp;#10;        continueRoutine = false;&amp;#10;    } else {&amp;#10;        this_key = Number.parseInt(key_resp_4.keys[0]);&amp;#10;    }&amp;#10;}&amp;#10;this_resp = [slider_3.getRating(), this_key];&amp;#10;if (_pj.in_es6(ans, this_resp)) {&amp;#10;    msg = &quot;Correct!&quot;;&amp;#10;} else {&amp;#10;    if ((! _pj.in_es6(ans, this_resp))) {&amp;#10;        msg = &quot;Incorrect!&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="if evntlg:&amp;#10;    ## 80 is event code 1, reserved here for end of trial&amp;#10;    sr.write(&quot;80&quot;.encode())&amp;#10;    core.wait(0.1)&amp;#10;    sr.write(&quot;00&quot;.encode())&amp;#10;# Set variables and adjust pointer&amp;#10;this_key = &quot;emp&quot;&amp;#10;if len(key_resp_4.keys) &gt; 0:&amp;#10;    if  &quot;s&quot; in key_resp_4.keys:&amp;#10;        prac_trials.finished=True&amp;#10;        continueRoutine=False&amp;#10;    else:&amp;#10;        this_key = int(key_resp_4.keys[0])&amp;#10;this_resp =[slider_3.getRating(), this_key]&amp;#10;&amp;#10;if  ans in this_resp:&amp;#10;    msg = &quot;Correct!&quot;  # For correct trials add one to&amp;#10;        &amp;#10;elif ans not in this_resp: # For incorrect answers&amp;#10;    msg = &quot;Incorrect!&quot;" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="practice_code" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -1027,7 +1106,7 @@
         <Param val="slider_3" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="$slidershow" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="constant" name="readOnly"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="(1.0, 0.1)" valType="list" updates="constant" name="size"/>
@@ -1039,7 +1118,7 @@
         <Param val="False" valType="bool" updates="constant" name="storeHistory"/>
         <Param val="True" valType="bool" updates="constant" name="storeRating"/>
         <Param val="True" valType="bool" updates="constant" name="storeRatingTime"/>
-        <Param val="[]" valType="list" updates="constant" name="styleTweaks"/>
+        <Param val="()" valType="list" updates="constant" name="styleTweaks"/>
         <Param val="choice" valType="str" updates="constant" name="styles"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)" valType="list" updates="constant" name="ticks"/>
@@ -1049,6 +1128,7 @@
       <KeyboardComponent name="key_resp_4" plugin="None">
         <Param val="&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;,&quot;0&quot;,&quot;s&quot;" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -1088,15 +1168,15 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="msg = &quot;&quot;;&amp;#10;time = 20;&amp;#10;timer = new core.CountdownTimer(time);&amp;#10;eq_gen.make_equation(&quot;easy1&quot;);&amp;#10;eq = `${eq_gen.equation}`;&amp;#10;ans = Number.parseInt(eq_gen.ans);&amp;#10;timeout = false;&amp;#10;if (evntlg) {&amp;#10;    sr.write(difbyt);&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="msg = &quot;&quot;&amp;#10;time=20&amp;#10;timer = core.CountdownTimer(time)&amp;#10;&amp;#10;#Set sum for this repetition&amp;#10;eq_gen.make_equation(&quot;easy1&quot;)&amp;#10;eq = &quot;%s = ?&quot; %(eq_gen.equation)&amp;#10;ans = int(eq_gen.ans)&amp;#10;timeout = False&amp;#10;&amp;#10;# If serial object is loaded then use it&amp;#10;if evntlg :    sr.write(difbyt)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="msg = &quot;&quot;;&amp;#10;time = prac_time;&amp;#10;timer = new core.CountdownTimer(time);&amp;#10;eq_gen.make_equation(&quot;easy1&quot;);&amp;#10;eq = `${eq_gen.equation}`;&amp;#10;ans = Number.parseInt(eq_gen.ans);&amp;#10;timeout = false;&amp;#10;if (evntlg) {&amp;#10;    sr.write(pracbyt.toString().encode());&amp;#10;    core.wait(0.1);&amp;#10;    sr.write(&quot;RR&quot;.encode());&amp;#10;    sr.write(&quot;00&quot;.encode());&amp;#10;    sr.write(&quot;RR&quot;.encode());&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="msg = &quot;&quot;&amp;#10;time=prac_time&amp;#10;timer = core.CountdownTimer(time)&amp;#10;&amp;#10;#Set sum for this repetition&amp;#10;eq_gen.make_equation(&quot;easy1&quot;)&amp;#10;eq = &quot;%s = ?&quot; %(eq_gen.equation)&amp;#10;ans = int(eq_gen.ans)&amp;#10;timeout = False&amp;#10;# If serial object is loaded then use it&amp;#10;if evntlg :&amp;#10;    sr.write(str(pracbyt).encode())&amp;#10;    core.wait(0.1)&amp;#10;    sr.write(&quot;RR&quot;.encode())&amp;#10;    sr.write(&quot;00&quot;.encode())&amp;#10;    sr.write(&quot;RR&quot;.encode())" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="if timer.getTime() &lt;= 0:&amp;#10;    timeout = True&amp;#10;    continueRoutine = False&amp;#10;    " valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="if ((timer.getTime() &lt;= 0)) {&amp;#10;    timeout = true;&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="if defaultKeyboard.getKeys(keyList=['escape']):&amp;#10;            sr.flush()&amp;#10;            sr.close()&amp;#10;            &amp;#10;if timer.getTime() &lt;= 0:&amp;#10;    timeout = True&amp;#10;    continueRoutine = False&amp;#10;    " valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="if (defaultKeyboard.getKeys({&quot;keyList&quot;: [&quot;escape&quot;]})) {&amp;#10;    sr.flush();&amp;#10;    sr.close();&amp;#10;}&amp;#10;if ((timer.getTime() &lt;= 0)) {&amp;#10;    timeout = true;&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;if (evntlg) {&amp;#10;    sr.write(&quot;00&quot;.encode());&amp;#10;}&amp;#10;this_key = &quot;emp&quot;;&amp;#10;if ((key_resp_5.keys.length &gt; 0)) {&amp;#10;    if (_pj.in_es6(&quot;s&quot;, key_resp_5.keys)) {&amp;#10;        prac_trial2.finished = true;&amp;#10;        continueRoutine = false;&amp;#10;    } else {&amp;#10;        this_key = Number.parseInt(key_resp_5.keys[0]);&amp;#10;        this_resp = [slider_4.getRating(), this_key];&amp;#10;    }&amp;#10;}&amp;#10;if (_pj.in_es6(ans, this_resp)) {&amp;#10;    msg = &quot;Correct!&quot;;&amp;#10;}&amp;#10;if (_pj.in_es6(&quot;s&quot;, this_resp)) {&amp;#10;    prac_trials2.finished = true;&amp;#10;} else {&amp;#10;    if ((timeout === true)) {&amp;#10;        msg = &quot;Time-Out!&quot;;&amp;#10;    } else {&amp;#10;        if ((! _pj.in_es6(ans, this_resp))) {&amp;#10;            msg = &quot;Incorrect!&quot;;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="# Set serial to 0 if running&amp;#10;if evntlg:  sr.write(&quot;00&quot;.encode())&amp;#10;&amp;#10;# Set variables and adjust pointer&amp;#10;this_key = &quot;emp&quot;&amp;#10;if len(key_resp_5.keys) &gt; 0:&amp;#10;    if  &quot;s&quot; in key_resp_5.keys:&amp;#10;        prac_trial2.finished=True&amp;#10;        continueRoutine=False&amp;#10;    else:&amp;#10;        this_key = int(key_resp_5.keys[0])&amp;#10;        this_resp =[slider_4.getRating(), this_key]&amp;#10;&amp;#10;if  ans in this_resp:&amp;#10;    msg = &quot;Correct!&quot;  # For correct trials add one to&amp;#10;&amp;#10;if  &quot;s&quot; in this_resp:&amp;#10;    prac_trials2.finished=True&amp;#10;        &amp;#10;elif (timeout is True):&amp;#10;    msg = &quot;Time-Out!&quot;&amp;#10;&amp;#10;elif ans not in this_resp: # For incorrect answers&amp;#10;    msg = &quot;Incorrect!&quot;" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;if (evntlg) {&amp;#10;    sr.write(&quot;80&quot;.encode());&amp;#10;    core.wait(0.1);&amp;#10;    sr.write(&quot;RR&quot;.encode());&amp;#10;}&amp;#10;this_key = &quot;emp&quot;;&amp;#10;if ((key_resp_5.keys.length &gt; 0)) {&amp;#10;    if (_pj.in_es6(&quot;s&quot;, key_resp_5.keys)) {&amp;#10;        prac_trial2.finished = true;&amp;#10;        continueRoutine = false;&amp;#10;    } else {&amp;#10;        this_key = Number.parseInt(key_resp_5.keys[0]);&amp;#10;        this_resp = [slider_4.getRating(), this_key];&amp;#10;    }&amp;#10;}&amp;#10;if (_pj.in_es6(ans, this_resp)) {&amp;#10;    msg = &quot;Correct!&quot;;&amp;#10;}&amp;#10;if (_pj.in_es6(&quot;s&quot;, this_resp)) {&amp;#10;    prac_trials2.finished = true;&amp;#10;} else {&amp;#10;    if ((timeout === true)) {&amp;#10;        msg = &quot;Time-Out!&quot;;&amp;#10;    } else {&amp;#10;        if ((! _pj.in_es6(ans, this_resp))) {&amp;#10;            msg = &quot;Incorrect!&quot;;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="# Set serial to 0 if running&amp;#10;if evntlg:&amp;#10;    sr.write(&quot;80&quot;.encode())&amp;#10;    core.wait(0.1)&amp;#10;    sr.write(&quot;RR&quot;.encode())&amp;#10;&amp;#10;# Set variables and adjust pointer&amp;#10;this_key = &quot;emp&quot;&amp;#10;if len(key_resp_5.keys) &gt; 0:&amp;#10;    if  &quot;s&quot; in key_resp_5.keys:&amp;#10;        prac_trial2.finished=True&amp;#10;        continueRoutine=False&amp;#10;    else:&amp;#10;        this_key = int(key_resp_5.keys[0])&amp;#10;        this_resp =[slider_4.getRating(), this_key]&amp;#10;&amp;#10;if  ans in this_resp:&amp;#10;    msg = &quot;Correct!&quot;  # For correct trials add one to&amp;#10;&amp;#10;if  &quot;s&quot; in this_resp:&amp;#10;    prac_trials2.finished=True&amp;#10;        &amp;#10;elif (timeout is True):&amp;#10;    msg = &quot;Time-Out!&quot;&amp;#10;&amp;#10;elif ans not in this_resp: # For incorrect answers&amp;#10;    msg = &quot;Incorrect!&quot;" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="practice_code_2" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -1373,7 +1453,7 @@
         <Param val="slider_4" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="$slidershow" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="constant" name="readOnly"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="(1.0, 0.1)" valType="list" updates="constant" name="size"/>
@@ -1385,7 +1465,7 @@
         <Param val="False" valType="bool" updates="constant" name="storeHistory"/>
         <Param val="True" valType="bool" updates="constant" name="storeRating"/>
         <Param val="True" valType="bool" updates="constant" name="storeRatingTime"/>
-        <Param val="[]" valType="list" updates="constant" name="styleTweaks"/>
+        <Param val="()" valType="list" updates="constant" name="styleTweaks"/>
         <Param val="choice" valType="str" updates="constant" name="styles"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)" valType="list" updates="constant" name="ticks"/>
@@ -1395,6 +1475,7 @@
       <KeyboardComponent name="key_resp_5" plugin="None">
         <Param val="&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;,&quot;0&quot;,&quot;s&quot;" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -1501,6 +1582,7 @@
       <KeyboardComponent name="key_resp_8" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -1517,6 +1599,23 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
+      <CodeComponent name="flush_serial_2" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="#if evntlg:&amp;#10;#    sr.flush()" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="flush_serial_2" valType="code" updates="None" name="name"/>
+      </CodeComponent>
     </Routine>
     <Routine name="training_instructions">
       <RoutineSettingsComponent name="training_instructions" plugin="None">
@@ -1557,14 +1656,15 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Training instructions here" valType="str" updates="constant" name="text"/>
+        <Param val="End of Practice.&amp;#10;&amp;#10;The experimenter will tell you what happens next." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="key_resp_9" plugin="None">
-        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="'l'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -1581,6 +1681,23 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
+      <CodeComponent name="flush_serial_3" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="if evntlg:&amp;#10;    sr.flush()" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="if (evntlg) {&amp;#10;    sr.flush();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="flush_serial_3" valType="code" updates="None" name="name"/>
+      </CodeComponent>
     </Routine>
     <Routine name="next_block">
       <RoutineSettingsComponent name="next_block" plugin="None">
@@ -1629,6 +1746,7 @@
       <KeyboardComponent name="key_resp_3" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -1645,6 +1763,23 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
+      <CodeComponent name="flush_serial_4" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="if evntlg:&amp;#10;    sr.flush()" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="if (evntlg) {&amp;#10;    sr.flush();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="flush_serial_4" valType="code" updates="None" name="name"/>
+      </CodeComponent>
     </Routine>
     <Routine name="perf_feedback">
       <RoutineSettingsComponent name="perf_feedback" plugin="None">
@@ -1693,6 +1828,7 @@
       <KeyboardComponent name="key_resp_6" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -1709,6 +1845,23 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
+      <CodeComponent name="flush_serial_5" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="if evntlg:&amp;#10;    sr.flush()" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="if (evntlg) {&amp;#10;    sr.flush();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="flush_serial_5" valType="code" updates="None" name="name"/>
+      </CodeComponent>
     </Routine>
     <Routine name="start_experiment">
       <RoutineSettingsComponent name="start_experiment" plugin="None">
@@ -1749,14 +1902,15 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Press Space to Start experiment" valType="str" updates="constant" name="text"/>
+        <Param val="The experimenter will now start the main task." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="key_resp_7" plugin="None">
-        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="'l'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -1821,6 +1975,7 @@
       <KeyboardComponent name="key_resp_10" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -1871,11 +2026,11 @@
     <Routine name="new_ui"/>
     <LoopInitiator loopType="TrialHandler" name="prac_trial2">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[{'prac_diff': 'easy1'}, {'prac_diff': 'easy1'}, {'prac_diff': 'easy1'}]" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'prac_diff': 'easy1', 'prac_time': 30}, {'prac_diff': 'easy1', 'prac_time': 15}, {'prac_diff': 'easy1', 'prac_time': 5}]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="practice_difficulty.xlsx" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
-      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
       <Param name="nReps" updates="None" val="1" valType="num"/>
       <Param name="name" updates="None" val="prac_trial2" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
@@ -1887,7 +2042,7 @@
     <Routine name="training_instructions"/>
     <LoopInitiator loopType="TrialHandler" name="training_trials">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('train_diff', 'easy1'), ('train_time', np.int64(60))]), OrderedDict([('train_diff', 'easy2'), ('train_time', np.int64(60))]), OrderedDict([('train_diff', 'med1'), ('train_time', np.int64(60))]), OrderedDict([('train_diff', 'med2'), ('train_time', np.int64(60))]), OrderedDict([('train_diff', 'hard'), ('train_time', np.int64(60))])]" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('train_diff', 'easy1'), ('train_time', np.int64(60)), ('train_byt', 'C0')]), OrderedDict([('train_diff', 'easy2'), ('train_time', np.int64(60)), ('train_byt', 20.0)]), OrderedDict([('train_diff', 'med1'), ('train_time', np.int64(60)), ('train_byt', 'A0')]), OrderedDict([('train_diff', 'med2'), ('train_time', np.int64(60)), ('train_byt', 60.0)]), OrderedDict([('train_diff', 'hard'), ('train_time', np.int64(60)), ('train_byt', 'E0')])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="training.csv" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
